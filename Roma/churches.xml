@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<churches>
+	<church id="pietro">
+		<name>San Pietro</name>
+		<description>big church</description>
+		<icon>pietro.png</icon>
+		<contentPage>pietro</contentPage>
+		<latitude>41.902221</latitude>
+		<longitude>12.455031</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="nouva">
+		<name>Chiesa Nuova</name>
+		<description>big church</description>
+		<icon>nuova.png</icon>
+		<contentPage>nuova</contentPage>
+		<latitude>41.898204</latitude>
+		<longitude>12.469171</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="gesu">
+		<name>Il Gesu</name>
+		<description>big church</description>
+		<icon>gesu.png</icon>
+		<contentPage>gesu</contentPage>
+		<latitude>41.895825</latitude>
+		<longitude>12.479374</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="giovanni">
+		<name>S Giovanni in Laterano</name>
+		<description>big church</description>
+		<icon>giovanni.png</icon>
+		<contentPage>giovanni</contentPage>
+		<latitude>41.885981</latitude>
+		<longitude>12.506443</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="lorenzo">
+		<name>S Lorenzo in Damaso</name>
+		<description>big church</description>
+		<icon>lorenzo.png</icon>
+		<contentPage>lorenzo</contentPage>
+		<latitude>41.896759</latitude>
+		<longitude>12.472057</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="luigi">
+		<name>S Luigi dei Francesi</name>
+		<description>big church</description>
+		<icon>luigi.png</icon>
+		<contentPage>luigi</contentPage>
+		<latitude>41.89963</latitude>
+		<longitude>12.474863</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="marcello">
+		<name>S Marcello</name>
+		<description>big church</description>
+		<icon>marcello.png</icon>
+		<contentPage>marcello</contentPage>
+		<latitude>41.898656</latitude>
+		<longitude>12.481657</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="ctrastevere">
+		<name>S Cecilia in Trastevere</name>
+		<description>big church</description>
+		<icon>cecilia.png</icon>
+		<contentPage>cecilia</contentPage>
+		<latitude>41.887287</latitude>
+		<longitude>12.476574</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="mmontesano">
+		<name>S Maria in Montesano</name>
+		<description>big church</description>
+		<icon>mmontesano.png</icon>
+		<contentPage>mariamontesano</contentPage>
+		<latitude>41.90999</latitude>
+		<longitude>12.476907</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="mtrastevere">
+		<name>S Maria in Trastevere</name>
+		<description>big church</description>
+		<icon>mariatrastevere.png</icon>
+		<contentPage>mariatrastevere</contentPage>
+		<latitude>41.889377</latitude>
+		<longitude>12.470217</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+	<church id="maggiore">
+		<name>S Maria maggiore</name>
+		<description>big church</description>
+		<icon>maggiore.png</icon>
+		<contentPage>maggiore</contentPage>
+		<latitude>	41.897366</latitude>
+		<longitude>12.49889</longitude>
+		<songs>
+			<song id="1" time="2:04">Palestrina in St. Peter's</song>
+			<song id="2" time="1:42">Palestrina and Michelangelo</song>
+			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
+		</songs>
+	</church>
+</churches>

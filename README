@@ -1,0 +1,11 @@
+3/11/2011
+
+This project is based on the open source iphone framework Three20: http://three20.info
+
+download it and place it outside the project directory:
+>
+Roma
+Three20
+
+import into Xcode and run
+

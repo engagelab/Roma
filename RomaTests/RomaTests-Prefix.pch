@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'RomaTests' target in the 'RomaTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

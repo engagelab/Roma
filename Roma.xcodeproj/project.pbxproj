@@ -1,0 +1,1342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3201088596B4756681693705 /* libThree20UICommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3201088596B4756681693704 /* libThree20UICommon.a */; };
+		320A2827FEC940B25BC42C65 /* libThree20Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320A2827FEC940B25BC42C64 /* libThree20Core.a */; };
+		320A5A189C235877202780D5 /* libThree20Network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320A5A189C235877202780D4 /* libThree20Network.a */; };
+		320A737074758E53BA54BE95 /* libThree20UINavigator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320A737074758E53BA54BE94 /* libThree20UINavigator.a */; };
+		320AF8492C47A4D819F7C451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320AF8492C47A4D819F7C450 /* QuartzCore.framework */; };
+		320B6C86F11D9990244A9731 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 320B6C86F11D9990244A9730 /* Three20.bundle */; };
+		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
+		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
+		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		AE51B93E132A145F00EC32C1 /* APAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B911132A145F00EC32C1 /* APAttribute.m */; };
+		AE51B93F132A145F00EC32C1 /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B913132A145F00EC32C1 /* APDocument.m */; };
+		AE51B940132A145F00EC32C1 /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B915132A145F00EC32C1 /* APElement.m */; };
+		AE51B94B132A145F00EC32C1 /* PlaceMark.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B92C132A145F00EC32C1 /* PlaceMark.m */; };
+		AE51B953132A145F00EC32C1 /* TableDefaultStyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B93B132A145F00EC32C1 /* TableDefaultStyleSheet.m */; };
+		AE51B954132A145F00EC32C1 /* TTTableSubtitleItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B93D132A145F00EC32C1 /* TTTableSubtitleItemStyle.m */; };
+		AE51B96F132A175100EC32C1 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95B132A175100EC32C1 /* arrow.png */; };
+		AE51B970132A175100EC32C1 /* cecilia.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95C132A175100EC32C1 /* cecilia.png */; };
+		AE51B971132A175100EC32C1 /* ceciliaI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95D132A175100EC32C1 /* ceciliaI.png */; };
+		AE51B972132A175100EC32C1 /* ceciliaO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95E132A175100EC32C1 /* ceciliaO.png */; };
+		AE51B973132A175100EC32C1 /* church icon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95F132A175100EC32C1 /* church icon57x57.png */; };
+		AE51B974132A175100EC32C1 /* gesu.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B960132A175100EC32C1 /* gesu.png */; };
+		AE51B975132A175100EC32C1 /* giovanni.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B961132A175100EC32C1 /* giovanni.png */; };
+		AE51B976132A175100EC32C1 /* ipod.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B962132A175100EC32C1 /* ipod.png */; };
+		AE51B977132A175100EC32C1 /* locator.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B963132A175100EC32C1 /* locator.png */; };
+		AE51B978132A175100EC32C1 /* lorenzo.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B964132A175100EC32C1 /* lorenzo.png */; };
+		AE51B979132A175100EC32C1 /* luigi.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B965132A175100EC32C1 /* luigi.png */; };
+		AE51B97A132A175100EC32C1 /* maggiore.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B966132A175100EC32C1 /* maggiore.png */; };
+		AE51B97B132A175100EC32C1 /* marcello.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B967132A175100EC32C1 /* marcello.png */; };
+		AE51B97C132A175100EC32C1 /* mariatrastevere.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B968132A175100EC32C1 /* mariatrastevere.png */; };
+		AE51B97D132A175100EC32C1 /* mmontesano.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B969132A175100EC32C1 /* mmontesano.png */; };
+		AE51B97E132A175100EC32C1 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B96A132A175100EC32C1 /* music.png */; };
+		AE51B97F132A175100EC32C1 /* Note.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B96B132A175100EC32C1 /* Note.png */; };
+		AE51B980132A175100EC32C1 /* nuova.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B96C132A175100EC32C1 /* nuova.png */; };
+		AE51B981132A175100EC32C1 /* pietro.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B96D132A175100EC32C1 /* pietro.png */; };
+		AE51B982132A175100EC32C1 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B96E132A175100EC32C1 /* Star.png */; };
+		AE51B988132A17FF00EC32C1 /* churches.xml in Resources */ = {isa = PBXBuildFile; fileRef = AE51B987132A17FF00EC32C1 /* churches.xml */; };
+		AE51B98C132A184200EC32C1 /* ceciliaInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B98B132A184200EC32C1 /* ceciliaInside.html */; };
+		AE51B98E132A184A00EC32C1 /* ceciliaOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B98D132A184A00EC32C1 /* ceciliaOutside.html */; };
+		AE51B9A7132A189900EC32C1 /* gesuInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B98F132A189900EC32C1 /* gesuInside.html */; };
+		AE51B9A8132A189900EC32C1 /* gesuOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B990132A189900EC32C1 /* gesuOutside.html */; };
+		AE51B9A9132A189900EC32C1 /* giovanniInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B991132A189900EC32C1 /* giovanniInside.html */; };
+		AE51B9AA132A189900EC32C1 /* giovanniOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B992132A189900EC32C1 /* giovanniOutside.html */; };
+		AE51B9AB132A189900EC32C1 /* lorenzoInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B993132A189900EC32C1 /* lorenzoInside.html */; };
+		AE51B9AC132A189900EC32C1 /* lorenzoOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B994132A189900EC32C1 /* lorenzoOutside.html */; };
+		AE51B9AD132A189900EC32C1 /* luigiInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B995132A189900EC32C1 /* luigiInside.html */; };
+		AE51B9AE132A189900EC32C1 /* luigiOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B996132A189900EC32C1 /* luigiOutside.html */; };
+		AE51B9AF132A189900EC32C1 /* maggioreInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B997132A189900EC32C1 /* maggioreInside.html */; };
+		AE51B9B0132A189900EC32C1 /* maggioreOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B998132A189900EC32C1 /* maggioreOutside.html */; };
+		AE51B9B1132A189900EC32C1 /* marcelloInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B999132A189900EC32C1 /* marcelloInside.html */; };
+		AE51B9B2132A189900EC32C1 /* marcelloOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99A132A189900EC32C1 /* marcelloOutside.html */; };
+		AE51B9B3132A189900EC32C1 /* mariamontesanoInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99B132A189900EC32C1 /* mariamontesanoInside.html */; };
+		AE51B9B4132A189900EC32C1 /* mariamontesanoOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99C132A189900EC32C1 /* mariamontesanoOutside.html */; };
+		AE51B9B5132A189900EC32C1 /* mariatrastevereInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99D132A189900EC32C1 /* mariatrastevereInside.html */; };
+		AE51B9B6132A189900EC32C1 /* mariatrastevereOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99E132A189900EC32C1 /* mariatrastevereOutside.html */; };
+		AE51B9B7132A189900EC32C1 /* mmontesanoInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99F132A189900EC32C1 /* mmontesanoInside.html */; };
+		AE51B9B8132A189900EC32C1 /* mmontesanoOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A0132A189900EC32C1 /* mmontesanoOutside.html */; };
+		AE51B9B9132A189900EC32C1 /* mtrastevereInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A1132A189900EC32C1 /* mtrastevereInside.html */; };
+		AE51B9BA132A189900EC32C1 /* mtrastevereOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A2132A189900EC32C1 /* mtrastevereOutside.html */; };
+		AE51B9BB132A189900EC32C1 /* nuovaInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A3132A189900EC32C1 /* nuovaInside.html */; };
+		AE51B9BC132A189900EC32C1 /* nuovaOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A4132A189900EC32C1 /* nuovaOutside.html */; };
+		AE51B9BD132A189900EC32C1 /* pietroInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A5132A189900EC32C1 /* pietroInside.html */; };
+		AE51B9BE132A189900EC32C1 /* pietroOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A6132A189900EC32C1 /* pietroOutside.html */; };
+		AE51B9C4132A18CA00EC32C1 /* Palestrina and Michelangelo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C0132A18CA00EC32C1 /* Palestrina and Michelangelo.mp3 */; };
+		AE51B9C5132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C1132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 */; };
+		AE51B9C6132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C2132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 */; };
+		AE51B9C7132A18CA00EC32C1 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C3132A18CA00EC32C1 /* sample.mp3 */; };
+		AE51B9D3132A195300EC32C1 /* lorenzoI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C9132A195300EC32C1 /* lorenzoI.png */; };
+		AE51B9D4132A195300EC32C1 /* lorenzoO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CA132A195300EC32C1 /* lorenzoO.png */; };
+		AE51B9D5132A195300EC32C1 /* mmontesanoI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CB132A195300EC32C1 /* mmontesanoI.png */; };
+		AE51B9D6132A195300EC32C1 /* mmontesanoO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CC132A195300EC32C1 /* mmontesanoO.png */; };
+		AE51B9D7132A195300EC32C1 /* mtrastevereI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CD132A195300EC32C1 /* mtrastevereI.png */; };
+		AE51B9D8132A195300EC32C1 /* mtrastevereO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CE132A195300EC32C1 /* mtrastevereO.png */; };
+		AE51B9D9132A195300EC32C1 /* nuovaI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CF132A195300EC32C1 /* nuovaI.png */; };
+		AE51B9DA132A195300EC32C1 /* nuovaO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9D0132A195300EC32C1 /* nuovaO.png */; };
+		AE51B9DB132A195300EC32C1 /* pietroI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9D1132A195300EC32C1 /* pietroI.png */; };
+		AE51B9DC132A195300EC32C1 /* pietroO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9D2132A195300EC32C1 /* pietroO.png */; };
+		AE51B9E0132A1A0800EC32C1 /* ChurchPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9DD132A1A0800EC32C1 /* ChurchPlayerViewController.m */; };
+		AE51B9E1132A1A0800EC32C1 /* ChurchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9DE132A1A0800EC32C1 /* ChurchViewController.m */; };
+		AE51B9E2132A1A0800EC32C1 /* TableControlsTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9DF132A1A0800EC32C1 /* TableControlsTestController.m */; };
+		AE51B9E5132A1A5B00EC32C1 /* church.css in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9E3132A1A5B00EC32C1 /* church.css */; };
+		AE51B9E6132A1A5B00EC32C1 /* rome.css in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9E4132A1A5B00EC32C1 /* rome.css */; };
+		AE51B9F5132A1AC400EC32C1 /* Church.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9F0132A1AC400EC32C1 /* Church.m */; };
+		AE51B9F6132A1AC400EC32C1 /* ChurchDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9F1132A1AC400EC32C1 /* ChurchDataSource.m */; };
+		AE51B9F7132A1AC400EC32C1 /* ChurchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9F2132A1AC400EC32C1 /* ChurchModel.m */; };
+		AE51B9F8132A1AC400EC32C1 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9F3132A1AC400EC32C1 /* Song.m */; };
+		AE51B9F9132A1AC400EC32C1 /* SongDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9F4132A1AC400EC32C1 /* SongDataSource.m */; };
+		AE51B9FC132A1AFD00EC32C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9FB132A1AFD00EC32C1 /* AppDelegate.m */; };
+		AE51BA51132A1EA100EC32C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51BA50132A1EA000EC32C1 /* MapKit.framework */; };
+		AE51BA53132A1EAE00EC32C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51BA52132A1EAE00EC32C1 /* AVFoundation.framework */; };
+		AE51BA55132A20ED00EC32C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51BA54132A20ED00EC32C1 /* CoreLocation.framework */; };
+		AE51BA57132A226C00EC32C1 /* ChurchSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51BA56132A226C00EC32C1 /* ChurchSingleton.m */; };
+		AE51BA59132A22B000EC32C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51BA58132A22B000EC32C1 /* main.m */; };
+		AE983FB7132A125800F84546 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE983FB6132A125800F84546 /* UIKit.framework */; };
+		AE983FB9132A125800F84546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE983FB8132A125800F84546 /* Foundation.framework */; };
+		AE983FBB132A125800F84546 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE983FBA132A125800F84546 /* CoreGraphics.framework */; };
+		AE983FC1132A125800F84546 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE983FBF132A125800F84546 /* InfoPlist.strings */; };
+		AE983FD7132A125800F84546 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE983FB6132A125800F84546 /* UIKit.framework */; };
+		AE983FD8132A125800F84546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE983FB8132A125800F84546 /* Foundation.framework */; };
+		AE983FD9132A125800F84546 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE983FBA132A125800F84546 /* CoreGraphics.framework */; };
+		AE983FE1132A125800F84546 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE983FDF132A125800F84546 /* InfoPlist.strings */; };
+		AE983FE4132A125800F84546 /* RomaTests.h in Resources */ = {isa = PBXBuildFile; fileRef = AE983FE3132A125800F84546 /* RomaTests.h */; };
+		AE983FE6132A125800F84546 /* RomaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE983FE5132A125800F84546 /* RomaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3201088596B4756681693702 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3201088596B4756681693700 /* Three20UICommon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20UICommon;
+		};
+		3201088596B4756681693706 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3201088596B4756681693700 /* Three20UICommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20UICommon;
+		};
+		320A2827FEC940B25BC42C62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A2827FEC940B25BC42C60 /* Three20Core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20Core;
+		};
+		320A2827FEC940B25BC42C66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A2827FEC940B25BC42C60 /* Three20Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20Core;
+		};
+		320A5A189C235877202780D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A5A189C235877202780D0 /* Three20Network.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20Network;
+		};
+		320A5A189C235877202780D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A5A189C235877202780D0 /* Three20Network.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20Network;
+		};
+		320A737074758E53BA54BE92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A737074758E53BA54BE90 /* Three20UINavigator.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20UINavigator;
+		};
+		320A737074758E53BA54BE96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A737074758E53BA54BE90 /* Three20UINavigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20UINavigator;
+		};
+		320CC833B8AF0ACFD35E6222 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20Style;
+		};
+		320CC833B8AF0ACFD35E6226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20Style;
+		};
+		320D7DCCE32703ACAB9A45E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20;
+		};
+		320D7DCCE32703ACAB9A45E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20;
+		};
+		320F2C48872C2E2C4DF86202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
+			remoteInfo = Three20UI;
+		};
+		320F2C48872C2E2C4DF86206 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
+			remoteInfo = Three20UI;
+		};
+		AE983FDA132A125800F84546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE983FA9132A125800F84546 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE983FB1132A125800F84546;
+			remoteInfo = Roma;
+		};
+		AE984021132A128600F84546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = Three20UnitTests;
+		};
+		AE984024132A128600F84546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A2827FEC940B25BC42C60 /* Three20Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = Three20CoreUnitTests;
+		};
+		AE984027132A128600F84546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A5A189C235877202780D0 /* Three20Network.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = Three20NetworkUnitTests;
+		};
+		AE98402A132A128600F84546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = Three20StyleUnitTests;
+		};
+		AE98402D132A128600F84546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = Three20UIUnitTests;
+		};
+		AE984030132A128600F84546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3201088596B4756681693700 /* Three20UICommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = Three20UICommonUnitTests;
+		};
+		AE984033132A128600F84546 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 320A737074758E53BA54BE90 /* Three20UINavigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
+			remoteInfo = Three20UINavigatorUnitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3201088596B4756681693700 /* Three20UICommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UICommon.xcodeproj; path = ../three20/src/Three20UICommon/Three20UICommon.xcodeproj; sourceTree = SOURCE_ROOT; };
+		320A2827FEC940B25BC42C60 /* Three20Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Core.xcodeproj; path = ../three20/src/Three20Core/Three20Core.xcodeproj; sourceTree = SOURCE_ROOT; };
+		320A5A189C235877202780D0 /* Three20Network.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Network.xcodeproj; path = ../three20/src/Three20Network/Three20Network.xcodeproj; sourceTree = SOURCE_ROOT; };
+		320A737074758E53BA54BE90 /* Three20UINavigator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UINavigator.xcodeproj; path = ../three20/src/Three20UINavigator/Three20UINavigator.xcodeproj; sourceTree = SOURCE_ROOT; };
+		320AF8492C47A4D819F7C450 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		320B6C86F11D9990244A9730 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = ../three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
+		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
+		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
+		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		AE51B910132A145F00EC32C1 /* APAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAttribute.h; sourceTree = "<group>"; };
+		AE51B911132A145F00EC32C1 /* APAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAttribute.m; sourceTree = "<group>"; };
+		AE51B912132A145F00EC32C1 /* APDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDocument.h; sourceTree = "<group>"; };
+		AE51B913132A145F00EC32C1 /* APDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDocument.m; sourceTree = "<group>"; };
+		AE51B914132A145F00EC32C1 /* APElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APElement.h; sourceTree = "<group>"; };
+		AE51B915132A145F00EC32C1 /* APElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APElement.m; sourceTree = "<group>"; };
+		AE51B918132A145F00EC32C1 /* APXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APXML.h; sourceTree = "<group>"; };
+		AE51B92B132A145F00EC32C1 /* PlaceMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceMark.h; sourceTree = "<group>"; };
+		AE51B92C132A145F00EC32C1 /* PlaceMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceMark.m; sourceTree = "<group>"; };
+		AE51B93A132A145F00EC32C1 /* TableDefaultStyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDefaultStyleSheet.h; sourceTree = "<group>"; };
+		AE51B93B132A145F00EC32C1 /* TableDefaultStyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDefaultStyleSheet.m; sourceTree = "<group>"; };
+		AE51B93C132A145F00EC32C1 /* TTTableSubtitleItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTableSubtitleItemStyle.h; sourceTree = "<group>"; };
+		AE51B93D132A145F00EC32C1 /* TTTableSubtitleItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTableSubtitleItemStyle.m; sourceTree = "<group>"; };
+		AE51B95B132A175100EC32C1 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		AE51B95C132A175100EC32C1 /* cecilia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cecilia.png; sourceTree = "<group>"; };
+		AE51B95D132A175100EC32C1 /* ceciliaI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaI.png; sourceTree = "<group>"; };
+		AE51B95E132A175100EC32C1 /* ceciliaO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaO.png; sourceTree = "<group>"; };
+		AE51B95F132A175100EC32C1 /* church icon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "church icon57x57.png"; sourceTree = "<group>"; };
+		AE51B960132A175100EC32C1 /* gesu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gesu.png; sourceTree = "<group>"; };
+		AE51B961132A175100EC32C1 /* giovanni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giovanni.png; sourceTree = "<group>"; };
+		AE51B962132A175100EC32C1 /* ipod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipod.png; sourceTree = "<group>"; };
+		AE51B963132A175100EC32C1 /* locator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locator.png; sourceTree = "<group>"; };
+		AE51B964132A175100EC32C1 /* lorenzo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzo.png; sourceTree = "<group>"; };
+		AE51B965132A175100EC32C1 /* luigi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi.png; sourceTree = "<group>"; };
+		AE51B966132A175100EC32C1 /* maggiore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maggiore.png; sourceTree = "<group>"; };
+		AE51B967132A175100EC32C1 /* marcello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marcello.png; sourceTree = "<group>"; };
+		AE51B968132A175100EC32C1 /* mariatrastevere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariatrastevere.png; sourceTree = "<group>"; };
+		AE51B969132A175100EC32C1 /* mmontesano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesano.png; sourceTree = "<group>"; };
+		AE51B96A132A175100EC32C1 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		AE51B96B132A175100EC32C1 /* Note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Note.png; sourceTree = "<group>"; };
+		AE51B96C132A175100EC32C1 /* nuova.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuova.png; sourceTree = "<group>"; };
+		AE51B96D132A175100EC32C1 /* pietro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietro.png; sourceTree = "<group>"; };
+		AE51B96E132A175100EC32C1 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
+		AE51B987132A17FF00EC32C1 /* churches.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = churches.xml; sourceTree = "<group>"; };
+		AE51B98B132A184200EC32C1 /* ceciliaInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ceciliaInside.html; sourceTree = "<group>"; };
+		AE51B98D132A184A00EC32C1 /* ceciliaOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ceciliaOutside.html; sourceTree = "<group>"; };
+		AE51B98F132A189900EC32C1 /* gesuInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = gesuInside.html; sourceTree = "<group>"; };
+		AE51B990132A189900EC32C1 /* gesuOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = gesuOutside.html; sourceTree = "<group>"; };
+		AE51B991132A189900EC32C1 /* giovanniInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = giovanniInside.html; sourceTree = "<group>"; };
+		AE51B992132A189900EC32C1 /* giovanniOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = giovanniOutside.html; sourceTree = "<group>"; };
+		AE51B993132A189900EC32C1 /* lorenzoInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lorenzoInside.html; sourceTree = "<group>"; };
+		AE51B994132A189900EC32C1 /* lorenzoOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lorenzoOutside.html; sourceTree = "<group>"; };
+		AE51B995132A189900EC32C1 /* luigiInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = luigiInside.html; sourceTree = "<group>"; };
+		AE51B996132A189900EC32C1 /* luigiOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = luigiOutside.html; sourceTree = "<group>"; };
+		AE51B997132A189900EC32C1 /* maggioreInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = maggioreInside.html; sourceTree = "<group>"; };
+		AE51B998132A189900EC32C1 /* maggioreOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = maggioreOutside.html; sourceTree = "<group>"; };
+		AE51B999132A189900EC32C1 /* marcelloInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = marcelloInside.html; sourceTree = "<group>"; };
+		AE51B99A132A189900EC32C1 /* marcelloOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = marcelloOutside.html; sourceTree = "<group>"; };
+		AE51B99B132A189900EC32C1 /* mariamontesanoInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mariamontesanoInside.html; sourceTree = "<group>"; };
+		AE51B99C132A189900EC32C1 /* mariamontesanoOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mariamontesanoOutside.html; sourceTree = "<group>"; };
+		AE51B99D132A189900EC32C1 /* mariatrastevereInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mariatrastevereInside.html; sourceTree = "<group>"; };
+		AE51B99E132A189900EC32C1 /* mariatrastevereOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mariatrastevereOutside.html; sourceTree = "<group>"; };
+		AE51B99F132A189900EC32C1 /* mmontesanoInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mmontesanoInside.html; sourceTree = "<group>"; };
+		AE51B9A0132A189900EC32C1 /* mmontesanoOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mmontesanoOutside.html; sourceTree = "<group>"; };
+		AE51B9A1132A189900EC32C1 /* mtrastevereInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mtrastevereInside.html; sourceTree = "<group>"; };
+		AE51B9A2132A189900EC32C1 /* mtrastevereOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mtrastevereOutside.html; sourceTree = "<group>"; };
+		AE51B9A3132A189900EC32C1 /* nuovaInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = nuovaInside.html; sourceTree = "<group>"; };
+		AE51B9A4132A189900EC32C1 /* nuovaOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = nuovaOutside.html; sourceTree = "<group>"; };
+		AE51B9A5132A189900EC32C1 /* pietroInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = pietroInside.html; sourceTree = "<group>"; };
+		AE51B9A6132A189900EC32C1 /* pietroOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = pietroOutside.html; sourceTree = "<group>"; };
+		AE51B9C0132A18CA00EC32C1 /* Palestrina and Michelangelo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Palestrina and Michelangelo.mp3"; sourceTree = "<group>"; };
+		AE51B9C1132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Palestrina and the Counter-reformation.mp3"; sourceTree = "<group>"; };
+		AE51B9C2132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Palestrina in St. Peter's.mp3"; sourceTree = "<group>"; };
+		AE51B9C3132A18CA00EC32C1 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		AE51B9C9132A195300EC32C1 /* lorenzoI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoI.png; sourceTree = "<group>"; };
+		AE51B9CA132A195300EC32C1 /* lorenzoO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoO.png; sourceTree = "<group>"; };
+		AE51B9CB132A195300EC32C1 /* mmontesanoI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesanoI.png; sourceTree = "<group>"; };
+		AE51B9CC132A195300EC32C1 /* mmontesanoO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesanoO.png; sourceTree = "<group>"; };
+		AE51B9CD132A195300EC32C1 /* mtrastevereI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevereI.png; sourceTree = "<group>"; };
+		AE51B9CE132A195300EC32C1 /* mtrastevereO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevereO.png; sourceTree = "<group>"; };
+		AE51B9CF132A195300EC32C1 /* nuovaI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuovaI.png; sourceTree = "<group>"; };
+		AE51B9D0132A195300EC32C1 /* nuovaO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuovaO.png; sourceTree = "<group>"; };
+		AE51B9D1132A195300EC32C1 /* pietroI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietroI.png; sourceTree = "<group>"; };
+		AE51B9D2132A195300EC32C1 /* pietroO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietroO.png; sourceTree = "<group>"; };
+		AE51B9DD132A1A0800EC32C1 /* ChurchPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchPlayerViewController.m; sourceTree = "<group>"; };
+		AE51B9DE132A1A0800EC32C1 /* ChurchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchViewController.m; sourceTree = "<group>"; };
+		AE51B9DF132A1A0800EC32C1 /* TableControlsTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableControlsTestController.m; sourceTree = "<group>"; };
+		AE51B9E3132A1A5B00EC32C1 /* church.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = church.css; sourceTree = "<group>"; };
+		AE51B9E4132A1A5B00EC32C1 /* rome.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = rome.css; sourceTree = "<group>"; };
+		AE51B9E7132A1A7F00EC32C1 /* TableControlsTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableControlsTestController.h; sourceTree = "<group>"; };
+		AE51B9E8132A1A9400EC32C1 /* ChurchPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchPlayerViewController.h; sourceTree = "<group>"; };
+		AE51B9E9132A1A9400EC32C1 /* ChurchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchViewController.h; sourceTree = "<group>"; };
+		AE51B9EA132A1AC400EC32C1 /* Church.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Church.h; sourceTree = "<group>"; };
+		AE51B9EB132A1AC400EC32C1 /* ChurchDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchDataSource.h; sourceTree = "<group>"; };
+		AE51B9EC132A1AC400EC32C1 /* ChurchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchModel.h; sourceTree = "<group>"; };
+		AE51B9ED132A1AC400EC32C1 /* ChurchSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurchSingleton.h; sourceTree = "<group>"; };
+		AE51B9EE132A1AC400EC32C1 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		AE51B9EF132A1AC400EC32C1 /* SongDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDataSource.h; sourceTree = "<group>"; };
+		AE51B9F0132A1AC400EC32C1 /* Church.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Church.m; sourceTree = "<group>"; };
+		AE51B9F1132A1AC400EC32C1 /* ChurchDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchDataSource.m; sourceTree = "<group>"; };
+		AE51B9F2132A1AC400EC32C1 /* ChurchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchModel.m; sourceTree = "<group>"; };
+		AE51B9F3132A1AC400EC32C1 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		AE51B9F4132A1AC400EC32C1 /* SongDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDataSource.m; sourceTree = "<group>"; };
+		AE51B9FA132A1AFD00EC32C1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AE51B9FB132A1AFD00EC32C1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AE51BA50132A1EA000EC32C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AE51BA52132A1EAE00EC32C1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AE51BA54132A20ED00EC32C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AE51BA56132A226C00EC32C1 /* ChurchSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchSingleton.m; sourceTree = "<group>"; };
+		AE51BA58132A22B000EC32C1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AE983FB2132A125800F84546 /* Roma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE983FB6132A125800F84546 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AE983FB8132A125800F84546 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AE983FBA132A125800F84546 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AE983FBE132A125800F84546 /* Roma-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Roma-Info.plist"; sourceTree = "<group>"; };
+		AE983FC0132A125800F84546 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AE983FC2132A125800F84546 /* Roma-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Roma-Prefix.pch"; sourceTree = "<group>"; };
+		AE983FD6132A125800F84546 /* RomaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE983FDE132A125800F84546 /* RomaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RomaTests-Info.plist"; sourceTree = "<group>"; };
+		AE983FE0132A125800F84546 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AE983FE2132A125800F84546 /* RomaTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RomaTests-Prefix.pch"; sourceTree = "<group>"; };
+		AE983FE3132A125800F84546 /* RomaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RomaTests.h; sourceTree = "<group>"; };
+		AE983FE5132A125800F84546 /* RomaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RomaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE983FAF132A125800F84546 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE51BA55132A20ED00EC32C1 /* CoreLocation.framework in Frameworks */,
+				AE51BA53132A1EAE00EC32C1 /* AVFoundation.framework in Frameworks */,
+				AE51BA51132A1EA100EC32C1 /* MapKit.framework in Frameworks */,
+				3201088596B4756681693705 /* libThree20UICommon.a in Frameworks */,
+				320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */,
+				320A737074758E53BA54BE95 /* libThree20UINavigator.a in Frameworks */,
+				320A2827FEC940B25BC42C65 /* libThree20Core.a in Frameworks */,
+				320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */,
+				320AF8492C47A4D819F7C451 /* QuartzCore.framework in Frameworks */,
+				320A5A189C235877202780D5 /* libThree20Network.a in Frameworks */,
+				320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */,
+				AE983FB7132A125800F84546 /* UIKit.framework in Frameworks */,
+				AE983FB9132A125800F84546 /* Foundation.framework in Frameworks */,
+				AE983FBB132A125800F84546 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE983FD2132A125800F84546 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE983FD7132A125800F84546 /* UIKit.framework in Frameworks */,
+				AE983FD8132A125800F84546 /* Foundation.framework in Frameworks */,
+				AE983FD9132A125800F84546 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3201088596B4756681693703 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3201088596B4756681693704 /* libThree20UICommon.a */,
+				AE984031132A128600F84546 /* UICommonUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		320A2827FEC940B25BC42C63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				320A2827FEC940B25BC42C64 /* libThree20Core.a */,
+				AE984025132A128600F84546 /* CoreUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		320A5A189C235877202780D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				320A5A189C235877202780D4 /* libThree20Network.a */,
+				AE984028132A128600F84546 /* NetworkUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		320A737074758E53BA54BE93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				320A737074758E53BA54BE94 /* libThree20UINavigator.a */,
+				AE984034132A128600F84546 /* UINavigatorUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		320CC833B8AF0ACFD35E6223 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				320CC833B8AF0ACFD35E6224 /* libThree20Style.a */,
+				AE98402B132A128600F84546 /* StyleUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		320D7DCCE32703ACAB9A45E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				320D7DCCE32703ACAB9A45E4 /* libThree20.a */,
+				AE984022132A128600F84546 /* Three20UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		320F2C48872C2E2C4DF86203 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				320F2C48872C2E2C4DF86204 /* libThree20UI.a */,
+				AE98402E132A128600F84546 /* UIUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE51B90F132A145F00EC32C1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AE51BA58132A22B000EC32C1 /* main.m */,
+				AE51B9FA132A1AFD00EC32C1 /* AppDelegate.h */,
+				AE51B9FB132A1AFD00EC32C1 /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AE51B955132A148200EC32C1 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B910132A145F00EC32C1 /* APAttribute.h */,
+				AE51B911132A145F00EC32C1 /* APAttribute.m */,
+				AE51B912132A145F00EC32C1 /* APDocument.h */,
+				AE51B913132A145F00EC32C1 /* APDocument.m */,
+				AE51B914132A145F00EC32C1 /* APElement.h */,
+				AE51B915132A145F00EC32C1 /* APElement.m */,
+				AE51B918132A145F00EC32C1 /* APXML.h */,
+			);
+			name = xml;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AE51B956132A14AB00EC32C1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AE51BA56132A226C00EC32C1 /* ChurchSingleton.m */,
+				AE51B9EA132A1AC400EC32C1 /* Church.h */,
+				AE51B9EB132A1AC400EC32C1 /* ChurchDataSource.h */,
+				AE51B9EC132A1AC400EC32C1 /* ChurchModel.h */,
+				AE51B9ED132A1AC400EC32C1 /* ChurchSingleton.h */,
+				AE51B9EE132A1AC400EC32C1 /* Song.h */,
+				AE51B9EF132A1AC400EC32C1 /* SongDataSource.h */,
+				AE51B9F0132A1AC400EC32C1 /* Church.m */,
+				AE51B9F1132A1AC400EC32C1 /* ChurchDataSource.m */,
+				AE51B9F2132A1AC400EC32C1 /* ChurchModel.m */,
+				AE51B9F3132A1AC400EC32C1 /* Song.m */,
+				AE51B9F4132A1AC400EC32C1 /* SongDataSource.m */,
+			);
+			name = model;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AE51B957132A14FF00EC32C1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B9E8132A1A9400EC32C1 /* ChurchPlayerViewController.h */,
+				AE51B9E9132A1A9400EC32C1 /* ChurchViewController.h */,
+				AE51B9E7132A1A7F00EC32C1 /* TableControlsTestController.h */,
+				AE51B9DD132A1A0800EC32C1 /* ChurchPlayerViewController.m */,
+				AE51B9DE132A1A0800EC32C1 /* ChurchViewController.m */,
+				AE51B9DF132A1A0800EC32C1 /* TableControlsTestController.m */,
+			);
+			name = controller;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AE51B958132A15A600EC32C1 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B92B132A145F00EC32C1 /* PlaceMark.h */,
+				AE51B92C132A145F00EC32C1 /* PlaceMark.m */,
+			);
+			name = map;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AE51B959132A15E100EC32C1 /* table */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B93A132A145F00EC32C1 /* TableDefaultStyleSheet.h */,
+				AE51B93B132A145F00EC32C1 /* TableDefaultStyleSheet.m */,
+				AE51B93C132A145F00EC32C1 /* TTTableSubtitleItemStyle.h */,
+				AE51B93D132A145F00EC32C1 /* TTTableSubtitleItemStyle.m */,
+			);
+			name = table;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AE51B95A132A167600EC32C1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B9C8132A191F00EC32C1 /* general */,
+				AE51B983132A177200EC32C1 /* table icons */,
+				AE51B984132A178100EC32C1 /* basic icons */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		AE51B983132A177200EC32C1 /* table icons */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B95C132A175100EC32C1 /* cecilia.png */,
+				AE51B960132A175100EC32C1 /* gesu.png */,
+				AE51B961132A175100EC32C1 /* giovanni.png */,
+				AE51B962132A175100EC32C1 /* ipod.png */,
+				AE51B964132A175100EC32C1 /* lorenzo.png */,
+				AE51B965132A175100EC32C1 /* luigi.png */,
+				AE51B966132A175100EC32C1 /* maggiore.png */,
+				AE51B967132A175100EC32C1 /* marcello.png */,
+				AE51B968132A175100EC32C1 /* mariatrastevere.png */,
+				AE51B969132A175100EC32C1 /* mmontesano.png */,
+				AE51B96C132A175100EC32C1 /* nuova.png */,
+				AE51B96D132A175100EC32C1 /* pietro.png */,
+			);
+			name = "table icons";
+			sourceTree = "<group>";
+		};
+		AE51B984132A178100EC32C1 /* basic icons */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B963132A175100EC32C1 /* locator.png */,
+				AE51B95B132A175100EC32C1 /* arrow.png */,
+				AE51B95F132A175100EC32C1 /* church icon57x57.png */,
+				AE51B96A132A175100EC32C1 /* music.png */,
+				AE51B96B132A175100EC32C1 /* Note.png */,
+				AE51B96E132A175100EC32C1 /* Star.png */,
+			);
+			name = "basic icons";
+			sourceTree = "<group>";
+		};
+		AE51B985132A17C400EC32C1 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B9E3132A1A5B00EC32C1 /* church.css */,
+				AE51B9E4132A1A5B00EC32C1 /* rome.css */,
+				AE51B9BF132A18B800EC32C1 /* music */,
+				AE51B98A132A182F00EC32C1 /* insideHTML */,
+				AE51B989132A181B00EC32C1 /* outsideHTML */,
+				AE51B987132A17FF00EC32C1 /* churches.xml */,
+				AE51B95A132A167600EC32C1 /* images */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		AE51B986132A17D800EC32C1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B959132A15E100EC32C1 /* table */,
+				AE51B958132A15A600EC32C1 /* map */,
+				AE51B957132A14FF00EC32C1 /* controller */,
+				AE51B956132A14AB00EC32C1 /* model */,
+				AE51B955132A148200EC32C1 /* xml */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		AE51B989132A181B00EC32C1 /* outsideHTML */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B990132A189900EC32C1 /* gesuOutside.html */,
+				AE51B992132A189900EC32C1 /* giovanniOutside.html */,
+				AE51B994132A189900EC32C1 /* lorenzoOutside.html */,
+				AE51B996132A189900EC32C1 /* luigiOutside.html */,
+				AE51B998132A189900EC32C1 /* maggioreOutside.html */,
+				AE51B99A132A189900EC32C1 /* marcelloOutside.html */,
+				AE51B99C132A189900EC32C1 /* mariamontesanoOutside.html */,
+				AE51B99E132A189900EC32C1 /* mariatrastevereOutside.html */,
+				AE51B9A0132A189900EC32C1 /* mmontesanoOutside.html */,
+				AE51B9A2132A189900EC32C1 /* mtrastevereOutside.html */,
+				AE51B9A4132A189900EC32C1 /* nuovaOutside.html */,
+				AE51B9A6132A189900EC32C1 /* pietroOutside.html */,
+				AE51B98D132A184A00EC32C1 /* ceciliaOutside.html */,
+			);
+			name = outsideHTML;
+			sourceTree = "<group>";
+		};
+		AE51B98A132A182F00EC32C1 /* insideHTML */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B98F132A189900EC32C1 /* gesuInside.html */,
+				AE51B991132A189900EC32C1 /* giovanniInside.html */,
+				AE51B993132A189900EC32C1 /* lorenzoInside.html */,
+				AE51B995132A189900EC32C1 /* luigiInside.html */,
+				AE51B997132A189900EC32C1 /* maggioreInside.html */,
+				AE51B999132A189900EC32C1 /* marcelloInside.html */,
+				AE51B99B132A189900EC32C1 /* mariamontesanoInside.html */,
+				AE51B99D132A189900EC32C1 /* mariatrastevereInside.html */,
+				AE51B99F132A189900EC32C1 /* mmontesanoInside.html */,
+				AE51B9A1132A189900EC32C1 /* mtrastevereInside.html */,
+				AE51B9A3132A189900EC32C1 /* nuovaInside.html */,
+				AE51B9A5132A189900EC32C1 /* pietroInside.html */,
+				AE51B98B132A184200EC32C1 /* ceciliaInside.html */,
+			);
+			name = insideHTML;
+			sourceTree = "<group>";
+		};
+		AE51B9BF132A18B800EC32C1 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B9C0132A18CA00EC32C1 /* Palestrina and Michelangelo.mp3 */,
+				AE51B9C1132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 */,
+				AE51B9C2132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 */,
+				AE51B9C3132A18CA00EC32C1 /* sample.mp3 */,
+			);
+			name = music;
+			sourceTree = "<group>";
+		};
+		AE51B9C8132A191F00EC32C1 /* general */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B9C9132A195300EC32C1 /* lorenzoI.png */,
+				AE51B9CA132A195300EC32C1 /* lorenzoO.png */,
+				AE51B9CB132A195300EC32C1 /* mmontesanoI.png */,
+				AE51B9CC132A195300EC32C1 /* mmontesanoO.png */,
+				AE51B9CD132A195300EC32C1 /* mtrastevereI.png */,
+				AE51B9CE132A195300EC32C1 /* mtrastevereO.png */,
+				AE51B9CF132A195300EC32C1 /* nuovaI.png */,
+				AE51B9D0132A195300EC32C1 /* nuovaO.png */,
+				AE51B9D1132A195300EC32C1 /* pietroI.png */,
+				AE51B9D2132A195300EC32C1 /* pietroO.png */,
+				AE51B95D132A175100EC32C1 /* ceciliaI.png */,
+				AE51B95E132A175100EC32C1 /* ceciliaO.png */,
+			);
+			name = general;
+			sourceTree = "<group>";
+		};
+		AE983FA7132A125800F84546 = {
+			isa = PBXGroup;
+			children = (
+				AE983FBC132A125800F84546 /* Roma */,
+				AE983FDC132A125800F84546 /* RomaTests */,
+				AE983FB5132A125800F84546 /* Frameworks */,
+				AE983FB3132A125800F84546 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE983FB3132A125800F84546 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE983FB2132A125800F84546 /* Roma.app */,
+				AE983FD6132A125800F84546 /* RomaTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE983FB5132A125800F84546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE51BA54132A20ED00EC32C1 /* CoreLocation.framework */,
+				AE51BA52132A1EAE00EC32C1 /* AVFoundation.framework */,
+				AE51BA50132A1EA000EC32C1 /* MapKit.framework */,
+				3201088596B4756681693700 /* Three20UICommon.xcodeproj */,
+				320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */,
+				320A737074758E53BA54BE90 /* Three20UINavigator.xcodeproj */,
+				320A2827FEC940B25BC42C60 /* Three20Core.xcodeproj */,
+				320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */,
+				320AF8492C47A4D819F7C450 /* QuartzCore.framework */,
+				320A5A189C235877202780D0 /* Three20Network.xcodeproj */,
+				320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */,
+				AE983FB6132A125800F84546 /* UIKit.framework */,
+				AE983FB8132A125800F84546 /* Foundation.framework */,
+				AE983FBA132A125800F84546 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE983FBC132A125800F84546 /* Roma */ = {
+			isa = PBXGroup;
+			children = (
+				AE51B986132A17D800EC32C1 /* src */,
+				AE51B985132A17C400EC32C1 /* resources */,
+				AE51B90F132A145F00EC32C1 /* Classes */,
+				AE983FBD132A125800F84546 /* Supporting Files */,
+			);
+			path = Roma;
+			sourceTree = "<group>";
+		};
+		AE983FBD132A125800F84546 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				320B6C86F11D9990244A9730 /* Three20.bundle */,
+				AE983FBE132A125800F84546 /* Roma-Info.plist */,
+				AE983FBF132A125800F84546 /* InfoPlist.strings */,
+				AE983FC2132A125800F84546 /* Roma-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE983FDC132A125800F84546 /* RomaTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE983FE3132A125800F84546 /* RomaTests.h */,
+				AE983FE5132A125800F84546 /* RomaTests.m */,
+				AE983FDD132A125800F84546 /* Supporting Files */,
+			);
+			path = RomaTests;
+			sourceTree = "<group>";
+		};
+		AE983FDD132A125800F84546 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE983FDE132A125800F84546 /* RomaTests-Info.plist */,
+				AE983FDF132A125800F84546 /* InfoPlist.strings */,
+				AE983FE2132A125800F84546 /* RomaTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE983FB1132A125800F84546 /* Roma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE983FE9132A125800F84546 /* Build configuration list for PBXNativeTarget "Roma" */;
+			buildPhases = (
+				AE983FAE132A125800F84546 /* Sources */,
+				AE983FAF132A125800F84546 /* Frameworks */,
+				AE983FB0132A125800F84546 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3201088596B4756681693701 /* PBXTargetDependency */,
+				320D7DCCE32703ACAB9A45E1 /* PBXTargetDependency */,
+				320A737074758E53BA54BE91 /* PBXTargetDependency */,
+				320A2827FEC940B25BC42C61 /* PBXTargetDependency */,
+				320F2C48872C2E2C4DF86201 /* PBXTargetDependency */,
+				320A5A189C235877202780D1 /* PBXTargetDependency */,
+				320CC833B8AF0ACFD35E6221 /* PBXTargetDependency */,
+			);
+			name = Roma;
+			productName = Roma;
+			productReference = AE983FB2132A125800F84546 /* Roma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE983FD5132A125800F84546 /* RomaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE983FEC132A125800F84546 /* Build configuration list for PBXNativeTarget "RomaTests" */;
+			buildPhases = (
+				AE983FD1132A125800F84546 /* Sources */,
+				AE983FD2132A125800F84546 /* Frameworks */,
+				AE983FD3132A125800F84546 /* Resources */,
+				AE983FD4132A125800F84546 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE983FDB132A125800F84546 /* PBXTargetDependency */,
+			);
+			name = RomaTests;
+			productName = RomaTests;
+			productReference = AE983FD6132A125800F84546 /* RomaTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE983FA9132A125800F84546 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = AE983FAC132A125800F84546 /* Build configuration list for PBXProject "Roma" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AE983FA7132A125800F84546;
+			productRefGroup = AE983FB3132A125800F84546 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 320D7DCCE32703ACAB9A45E3 /* Products */;
+					ProjectRef = 320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */;
+				},
+				{
+					ProductGroup = 320A2827FEC940B25BC42C63 /* Products */;
+					ProjectRef = 320A2827FEC940B25BC42C60 /* Three20Core.xcodeproj */;
+				},
+				{
+					ProductGroup = 320A5A189C235877202780D3 /* Products */;
+					ProjectRef = 320A5A189C235877202780D0 /* Three20Network.xcodeproj */;
+				},
+				{
+					ProductGroup = 320CC833B8AF0ACFD35E6223 /* Products */;
+					ProjectRef = 320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */;
+				},
+				{
+					ProductGroup = 320F2C48872C2E2C4DF86203 /* Products */;
+					ProjectRef = 320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */;
+				},
+				{
+					ProductGroup = 3201088596B4756681693703 /* Products */;
+					ProjectRef = 3201088596B4756681693700 /* Three20UICommon.xcodeproj */;
+				},
+				{
+					ProductGroup = 320A737074758E53BA54BE93 /* Products */;
+					ProjectRef = 320A737074758E53BA54BE90 /* Three20UINavigator.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				AE983FB1132A125800F84546 /* Roma */,
+				AE983FD5132A125800F84546 /* RomaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3201088596B4756681693704 /* libThree20UICommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20UICommon.a;
+			remoteRef = 3201088596B4756681693706 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		320A2827FEC940B25BC42C64 /* libThree20Core.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20Core.a;
+			remoteRef = 320A2827FEC940B25BC42C66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		320A5A189C235877202780D4 /* libThree20Network.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20Network.a;
+			remoteRef = 320A5A189C235877202780D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		320A737074758E53BA54BE94 /* libThree20UINavigator.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20UINavigator.a;
+			remoteRef = 320A737074758E53BA54BE96 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		320CC833B8AF0ACFD35E6224 /* libThree20Style.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20Style.a;
+			remoteRef = 320CC833B8AF0ACFD35E6226 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		320D7DCCE32703ACAB9A45E4 /* libThree20.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20.a;
+			remoteRef = 320D7DCCE32703ACAB9A45E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		320F2C48872C2E2C4DF86204 /* libThree20UI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libThree20UI.a;
+			remoteRef = 320F2C48872C2E2C4DF86206 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE984022132A128600F84546 /* Three20UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Three20UnitTests.octest;
+			remoteRef = AE984021132A128600F84546 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE984025132A128600F84546 /* CoreUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoreUnitTests.octest;
+			remoteRef = AE984024132A128600F84546 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE984028132A128600F84546 /* NetworkUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkUnitTests.octest;
+			remoteRef = AE984027132A128600F84546 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE98402B132A128600F84546 /* StyleUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StyleUnitTests.octest;
+			remoteRef = AE98402A132A128600F84546 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE98402E132A128600F84546 /* UIUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UIUnitTests.octest;
+			remoteRef = AE98402D132A128600F84546 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE984031132A128600F84546 /* UICommonUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UICommonUnitTests.octest;
+			remoteRef = AE984030132A128600F84546 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AE984034132A128600F84546 /* UINavigatorUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UINavigatorUnitTests.octest;
+			remoteRef = AE984033132A128600F84546 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE983FB0132A125800F84546 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320B6C86F11D9990244A9731 /* Three20.bundle in Resources */,
+				AE983FC1132A125800F84546 /* InfoPlist.strings in Resources */,
+				AE51B96F132A175100EC32C1 /* arrow.png in Resources */,
+				AE51B970132A175100EC32C1 /* cecilia.png in Resources */,
+				AE51B971132A175100EC32C1 /* ceciliaI.png in Resources */,
+				AE51B972132A175100EC32C1 /* ceciliaO.png in Resources */,
+				AE51B973132A175100EC32C1 /* church icon57x57.png in Resources */,
+				AE51B974132A175100EC32C1 /* gesu.png in Resources */,
+				AE51B975132A175100EC32C1 /* giovanni.png in Resources */,
+				AE51B976132A175100EC32C1 /* ipod.png in Resources */,
+				AE51B977132A175100EC32C1 /* locator.png in Resources */,
+				AE51B978132A175100EC32C1 /* lorenzo.png in Resources */,
+				AE51B979132A175100EC32C1 /* luigi.png in Resources */,
+				AE51B97A132A175100EC32C1 /* maggiore.png in Resources */,
+				AE51B97B132A175100EC32C1 /* marcello.png in Resources */,
+				AE51B97C132A175100EC32C1 /* mariatrastevere.png in Resources */,
+				AE51B97D132A175100EC32C1 /* mmontesano.png in Resources */,
+				AE51B97E132A175100EC32C1 /* music.png in Resources */,
+				AE51B97F132A175100EC32C1 /* Note.png in Resources */,
+				AE51B980132A175100EC32C1 /* nuova.png in Resources */,
+				AE51B981132A175100EC32C1 /* pietro.png in Resources */,
+				AE51B982132A175100EC32C1 /* Star.png in Resources */,
+				AE51B988132A17FF00EC32C1 /* churches.xml in Resources */,
+				AE51B98C132A184200EC32C1 /* ceciliaInside.html in Resources */,
+				AE51B98E132A184A00EC32C1 /* ceciliaOutside.html in Resources */,
+				AE51B9A7132A189900EC32C1 /* gesuInside.html in Resources */,
+				AE51B9A8132A189900EC32C1 /* gesuOutside.html in Resources */,
+				AE51B9A9132A189900EC32C1 /* giovanniInside.html in Resources */,
+				AE51B9AA132A189900EC32C1 /* giovanniOutside.html in Resources */,
+				AE51B9AB132A189900EC32C1 /* lorenzoInside.html in Resources */,
+				AE51B9AC132A189900EC32C1 /* lorenzoOutside.html in Resources */,
+				AE51B9AD132A189900EC32C1 /* luigiInside.html in Resources */,
+				AE51B9AE132A189900EC32C1 /* luigiOutside.html in Resources */,
+				AE51B9AF132A189900EC32C1 /* maggioreInside.html in Resources */,
+				AE51B9B0132A189900EC32C1 /* maggioreOutside.html in Resources */,
+				AE51B9B1132A189900EC32C1 /* marcelloInside.html in Resources */,
+				AE51B9B2132A189900EC32C1 /* marcelloOutside.html in Resources */,
+				AE51B9B3132A189900EC32C1 /* mariamontesanoInside.html in Resources */,
+				AE51B9B4132A189900EC32C1 /* mariamontesanoOutside.html in Resources */,
+				AE51B9B5132A189900EC32C1 /* mariatrastevereInside.html in Resources */,
+				AE51B9B6132A189900EC32C1 /* mariatrastevereOutside.html in Resources */,
+				AE51B9B7132A189900EC32C1 /* mmontesanoInside.html in Resources */,
+				AE51B9B8132A189900EC32C1 /* mmontesanoOutside.html in Resources */,
+				AE51B9B9132A189900EC32C1 /* mtrastevereInside.html in Resources */,
+				AE51B9BA132A189900EC32C1 /* mtrastevereOutside.html in Resources */,
+				AE51B9BB132A189900EC32C1 /* nuovaInside.html in Resources */,
+				AE51B9BC132A189900EC32C1 /* nuovaOutside.html in Resources */,
+				AE51B9BD132A189900EC32C1 /* pietroInside.html in Resources */,
+				AE51B9BE132A189900EC32C1 /* pietroOutside.html in Resources */,
+				AE51B9C4132A18CA00EC32C1 /* Palestrina and Michelangelo.mp3 in Resources */,
+				AE51B9C5132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 in Resources */,
+				AE51B9C6132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 in Resources */,
+				AE51B9C7132A18CA00EC32C1 /* sample.mp3 in Resources */,
+				AE51B9D3132A195300EC32C1 /* lorenzoI.png in Resources */,
+				AE51B9D4132A195300EC32C1 /* lorenzoO.png in Resources */,
+				AE51B9D5132A195300EC32C1 /* mmontesanoI.png in Resources */,
+				AE51B9D6132A195300EC32C1 /* mmontesanoO.png in Resources */,
+				AE51B9D7132A195300EC32C1 /* mtrastevereI.png in Resources */,
+				AE51B9D8132A195300EC32C1 /* mtrastevereO.png in Resources */,
+				AE51B9D9132A195300EC32C1 /* nuovaI.png in Resources */,
+				AE51B9DA132A195300EC32C1 /* nuovaO.png in Resources */,
+				AE51B9DB132A195300EC32C1 /* pietroI.png in Resources */,
+				AE51B9DC132A195300EC32C1 /* pietroO.png in Resources */,
+				AE51B9E5132A1A5B00EC32C1 /* church.css in Resources */,
+				AE51B9E6132A1A5B00EC32C1 /* rome.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE983FD3132A125800F84546 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE983FE1132A125800F84546 /* InfoPlist.strings in Resources */,
+				AE983FE4132A125800F84546 /* RomaTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE983FD4132A125800F84546 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE983FAE132A125800F84546 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE51B93E132A145F00EC32C1 /* APAttribute.m in Sources */,
+				AE51B93F132A145F00EC32C1 /* APDocument.m in Sources */,
+				AE51B940132A145F00EC32C1 /* APElement.m in Sources */,
+				AE51B94B132A145F00EC32C1 /* PlaceMark.m in Sources */,
+				AE51B953132A145F00EC32C1 /* TableDefaultStyleSheet.m in Sources */,
+				AE51B954132A145F00EC32C1 /* TTTableSubtitleItemStyle.m in Sources */,
+				AE51B9E0132A1A0800EC32C1 /* ChurchPlayerViewController.m in Sources */,
+				AE51B9E1132A1A0800EC32C1 /* ChurchViewController.m in Sources */,
+				AE51B9E2132A1A0800EC32C1 /* TableControlsTestController.m in Sources */,
+				AE51B9F5132A1AC400EC32C1 /* Church.m in Sources */,
+				AE51B9F6132A1AC400EC32C1 /* ChurchDataSource.m in Sources */,
+				AE51B9F7132A1AC400EC32C1 /* ChurchModel.m in Sources */,
+				AE51B9F8132A1AC400EC32C1 /* Song.m in Sources */,
+				AE51B9F9132A1AC400EC32C1 /* SongDataSource.m in Sources */,
+				AE51B9FC132A1AFD00EC32C1 /* AppDelegate.m in Sources */,
+				AE51BA57132A226C00EC32C1 /* ChurchSingleton.m in Sources */,
+				AE51BA59132A22B000EC32C1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE983FD1132A125800F84546 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE983FE6132A125800F84546 /* RomaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3201088596B4756681693701 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20UICommon;
+			targetProxy = 3201088596B4756681693702 /* PBXContainerItemProxy */;
+		};
+		320A2827FEC940B25BC42C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20Core;
+			targetProxy = 320A2827FEC940B25BC42C62 /* PBXContainerItemProxy */;
+		};
+		320A5A189C235877202780D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20Network;
+			targetProxy = 320A5A189C235877202780D2 /* PBXContainerItemProxy */;
+		};
+		320A737074758E53BA54BE91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20UINavigator;
+			targetProxy = 320A737074758E53BA54BE92 /* PBXContainerItemProxy */;
+		};
+		320CC833B8AF0ACFD35E6221 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20Style;
+			targetProxy = 320CC833B8AF0ACFD35E6222 /* PBXContainerItemProxy */;
+		};
+		320D7DCCE32703ACAB9A45E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20;
+			targetProxy = 320D7DCCE32703ACAB9A45E2 /* PBXContainerItemProxy */;
+		};
+		320F2C48872C2E2C4DF86201 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Three20UI;
+			targetProxy = 320F2C48872C2E2C4DF86202 /* PBXContainerItemProxy */;
+		};
+		AE983FDB132A125800F84546 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE983FB1132A125800F84546 /* Roma */;
+			targetProxy = AE983FDA132A125800F84546 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE983FBF132A125800F84546 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE983FC0132A125800F84546 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AE983FDF132A125800F84546 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE983FE0132A125800F84546 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE983FE7132A125800F84546 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20/**",
+					"$(BUILT_PRODUCTS_DIR)/../../three20/**",
+					"../three20/Build/Products/three20/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AE983FE8132A125800F84546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../three20/**",
+					"$(BUILT_PRODUCTS_DIR)/../../three20/**",
+					"../three20/Build/Products/three20/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		AE983FEA132A125800F84546 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Roma/Roma-Prefix.pch";
+				INFOPLIST_FILE = "Roma/Roma-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AE983FEB132A125800F84546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Roma/Roma-Prefix.pch";
+				INFOPLIST_FILE = "Roma/Roma-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AE983FED132A125800F84546 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Roma.app/Roma";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RomaTests/RomaTests-Prefix.pch";
+				INFOPLIST_FILE = "RomaTests/RomaTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		AE983FEE132A125800F84546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Roma.app/Roma";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RomaTests/RomaTests-Prefix.pch";
+				INFOPLIST_FILE = "RomaTests/RomaTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE983FAC132A125800F84546 /* Build configuration list for PBXProject "Roma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE983FE7132A125800F84546 /* Debug */,
+				AE983FE8132A125800F84546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE983FE9132A125800F84546 /* Build configuration list for PBXNativeTarget "Roma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE983FEA132A125800F84546 /* Debug */,
+				AE983FEB132A125800F84546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE983FEC132A125800F84546 /* Build configuration list for PBXNativeTarget "RomaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE983FED132A125800F84546 /* Debug */,
+				AE983FEE132A125800F84546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE983FA9132A125800F84546 /* Project object */;
+}

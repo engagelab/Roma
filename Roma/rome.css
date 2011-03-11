@@ -1,0 +1,46 @@
+
+	body
+	{
+		margin: 0;
+		padding:0;
+		background-color: white;
+		font-family: Helvetica;
+		font-size: 14px;
+	}
+	
+	body.inside {background-color: black;
+		color: white;
+		}
+	h1 
+	{
+		font-family: Helvetica;
+		font-size: 16px;
+		color: rgb(76,86,108);
+		display: none;
+	}	
+	
+p	{padding: 0 1em;
+	}
+	
+.open {font-size: 14px;
+		text-align: center;
+		}
+
+	ul	
+	{
+		padding: 0px;
+		width: 298px;
+		margin: 0px 0px;
+		margin-right: 10px;
+		background-color: white;
+		-webkit-border-radius: 8px;
+		border: 1px solid rgb(217,217,217); 
+	}
+	li
+	{
+		line-height: 17px;
+		list-style-type: none;
+		color:black;
+		border-bottom: 1px rgb(217,217,217) solid;
+		padding: 10px 10px 17px 10px;
+	}
