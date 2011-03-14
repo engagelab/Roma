@@ -16,6 +16,30 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		AE48C214132E6077005EA1DC /* ceciliaI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C1FC132E6077005EA1DC /* ceciliaI.png */; };
+		AE48C216132E6077005EA1DC /* ceciliaO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C1FE132E6077005EA1DC /* ceciliaO.png */; };
+		AE48C218132E6077005EA1DC /* lorenzoI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C200132E6077005EA1DC /* lorenzoI.png */; };
+		AE48C21A132E6077005EA1DC /* lorenzoO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C202132E6077005EA1DC /* lorenzoO.png */; };
+		AE48C21C132E6077005EA1DC /* mmontesanoI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C204132E6077005EA1DC /* mmontesanoI.png */; };
+		AE48C21D132E6077005EA1DC /* mmontesanoIHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C205132E6077005EA1DC /* mmontesanoIHD.png */; };
+		AE48C21E132E6077005EA1DC /* mmontesanoO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C206132E6077005EA1DC /* mmontesanoO.png */; };
+		AE48C21F132E6077005EA1DC /* mmontesanoOHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C207132E6077005EA1DC /* mmontesanoOHD.png */; };
+		AE48C220132E6077005EA1DC /* mtrastevereI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C208132E6077005EA1DC /* mtrastevereI.png */; };
+		AE48C221132E6077005EA1DC /* mtrastevereIHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C209132E6077005EA1DC /* mtrastevereIHD.png */; };
+		AE48C222132E6077005EA1DC /* mtrastevereO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C20A132E6077005EA1DC /* mtrastevereO.png */; };
+		AE48C223132E6077005EA1DC /* mtrastevereOHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C20B132E6077005EA1DC /* mtrastevereOHD.png */; };
+		AE48C224132E6077005EA1DC /* nuovaI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C20C132E6077005EA1DC /* nuovaI.png */; };
+		AE48C225132E6077005EA1DC /* nuovaIHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C20D132E6077005EA1DC /* nuovaIHD.png */; };
+		AE48C226132E6077005EA1DC /* nuovaO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C20E132E6077005EA1DC /* nuovaO.png */; };
+		AE48C227132E6077005EA1DC /* nuovaOHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C20F132E6077005EA1DC /* nuovaOHD.png */; };
+		AE48C228132E6077005EA1DC /* pietroI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C210132E6077005EA1DC /* pietroI.png */; };
+		AE48C229132E6077005EA1DC /* pietroIHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C211132E6077005EA1DC /* pietroIHD.png */; };
+		AE48C22A132E6077005EA1DC /* pietroO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C212132E6077005EA1DC /* pietroO.png */; };
+		AE48C22B132E6077005EA1DC /* pietroOHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C213132E6077005EA1DC /* pietroOHD.png */; };
+		AE48C22E132E6397005EA1DC /* lorenzoIHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C22C132E6397005EA1DC /* lorenzoIHD.png */; };
+		AE48C22F132E6397005EA1DC /* lorenzoOHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C22D132E6397005EA1DC /* lorenzoOHD.png */; };
+		AE48C240132EC115005EA1DC /* ceciliaIHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C23E132EC112005EA1DC /* ceciliaIHD.png */; };
+		AE48C241132EC115005EA1DC /* ceciliaOHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C23F132EC113005EA1DC /* ceciliaOHD.png */; };
 		AE51B93E132A145F00EC32C1 /* APAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B911132A145F00EC32C1 /* APAttribute.m */; };
 		AE51B93F132A145F00EC32C1 /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B913132A145F00EC32C1 /* APDocument.m */; };
 		AE51B940132A145F00EC32C1 /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B915132A145F00EC32C1 /* APElement.m */; };
@@ -24,8 +48,6 @@
 		AE51B954132A145F00EC32C1 /* TTTableSubtitleItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B93D132A145F00EC32C1 /* TTTableSubtitleItemStyle.m */; };
 		AE51B96F132A175100EC32C1 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95B132A175100EC32C1 /* arrow.png */; };
 		AE51B970132A175100EC32C1 /* cecilia.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95C132A175100EC32C1 /* cecilia.png */; };
-		AE51B971132A175100EC32C1 /* ceciliaI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95D132A175100EC32C1 /* ceciliaI.png */; };
-		AE51B972132A175100EC32C1 /* ceciliaO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95E132A175100EC32C1 /* ceciliaO.png */; };
 		AE51B973132A175100EC32C1 /* church icon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B95F132A175100EC32C1 /* church icon57x57.png */; };
 		AE51B974132A175100EC32C1 /* gesu.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B960132A175100EC32C1 /* gesu.png */; };
 		AE51B975132A175100EC32C1 /* giovanni.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B961132A175100EC32C1 /* giovanni.png */; };
@@ -35,7 +57,7 @@
 		AE51B979132A175100EC32C1 /* luigi.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B965132A175100EC32C1 /* luigi.png */; };
 		AE51B97A132A175100EC32C1 /* maggiore.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B966132A175100EC32C1 /* maggiore.png */; };
 		AE51B97B132A175100EC32C1 /* marcello.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B967132A175100EC32C1 /* marcello.png */; };
-		AE51B97C132A175100EC32C1 /* mariatrastevere.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B968132A175100EC32C1 /* mariatrastevere.png */; };
+		AE51B97C132A175100EC32C1 /* mtrastevere.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B968132A175100EC32C1 /* mtrastevere.png */; };
 		AE51B97D132A175100EC32C1 /* mmontesano.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B969132A175100EC32C1 /* mmontesano.png */; };
 		AE51B97E132A175100EC32C1 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B96A132A175100EC32C1 /* music.png */; };
 		AE51B97F132A175100EC32C1 /* Note.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B96B132A175100EC32C1 /* Note.png */; };
@@ -57,10 +79,6 @@
 		AE51B9B0132A189900EC32C1 /* maggioreOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B998132A189900EC32C1 /* maggioreOutside.html */; };
 		AE51B9B1132A189900EC32C1 /* marcelloInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B999132A189900EC32C1 /* marcelloInside.html */; };
 		AE51B9B2132A189900EC32C1 /* marcelloOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99A132A189900EC32C1 /* marcelloOutside.html */; };
-		AE51B9B3132A189900EC32C1 /* mariamontesanoInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99B132A189900EC32C1 /* mariamontesanoInside.html */; };
-		AE51B9B4132A189900EC32C1 /* mariamontesanoOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99C132A189900EC32C1 /* mariamontesanoOutside.html */; };
-		AE51B9B5132A189900EC32C1 /* mariatrastevereInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99D132A189900EC32C1 /* mariatrastevereInside.html */; };
-		AE51B9B6132A189900EC32C1 /* mariatrastevereOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99E132A189900EC32C1 /* mariatrastevereOutside.html */; };
 		AE51B9B7132A189900EC32C1 /* mmontesanoInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B99F132A189900EC32C1 /* mmontesanoInside.html */; };
 		AE51B9B8132A189900EC32C1 /* mmontesanoOutside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A0132A189900EC32C1 /* mmontesanoOutside.html */; };
 		AE51B9B9132A189900EC32C1 /* mtrastevereInside.html in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9A1132A189900EC32C1 /* mtrastevereInside.html */; };
@@ -73,16 +91,6 @@
 		AE51B9C5132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C1132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 */; };
 		AE51B9C6132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C2132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 */; };
 		AE51B9C7132A18CA00EC32C1 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C3132A18CA00EC32C1 /* sample.mp3 */; };
-		AE51B9D3132A195300EC32C1 /* lorenzoI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9C9132A195300EC32C1 /* lorenzoI.png */; };
-		AE51B9D4132A195300EC32C1 /* lorenzoO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CA132A195300EC32C1 /* lorenzoO.png */; };
-		AE51B9D5132A195300EC32C1 /* mmontesanoI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CB132A195300EC32C1 /* mmontesanoI.png */; };
-		AE51B9D6132A195300EC32C1 /* mmontesanoO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CC132A195300EC32C1 /* mmontesanoO.png */; };
-		AE51B9D7132A195300EC32C1 /* mtrastevereI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CD132A195300EC32C1 /* mtrastevereI.png */; };
-		AE51B9D8132A195300EC32C1 /* mtrastevereO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CE132A195300EC32C1 /* mtrastevereO.png */; };
-		AE51B9D9132A195300EC32C1 /* nuovaI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9CF132A195300EC32C1 /* nuovaI.png */; };
-		AE51B9DA132A195300EC32C1 /* nuovaO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9D0132A195300EC32C1 /* nuovaO.png */; };
-		AE51B9DB132A195300EC32C1 /* pietroI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9D1132A195300EC32C1 /* pietroI.png */; };
-		AE51B9DC132A195300EC32C1 /* pietroO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE51B9D2132A195300EC32C1 /* pietroO.png */; };
 		AE51B9E0132A1A0800EC32C1 /* ChurchPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9DD132A1A0800EC32C1 /* ChurchPlayerViewController.m */; };
 		AE51B9E1132A1A0800EC32C1 /* ChurchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9DE132A1A0800EC32C1 /* ChurchViewController.m */; };
 		AE51B9E2132A1A0800EC32C1 /* TableControlsTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B9DF132A1A0800EC32C1 /* TableControlsTestController.m */; };
@@ -278,6 +286,30 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		AE48C1FC132E6077005EA1DC /* ceciliaI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaI.png; sourceTree = "<group>"; };
+		AE48C1FE132E6077005EA1DC /* ceciliaO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaO.png; sourceTree = "<group>"; };
+		AE48C200132E6077005EA1DC /* lorenzoI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoI.png; sourceTree = "<group>"; };
+		AE48C202132E6077005EA1DC /* lorenzoO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoO.png; sourceTree = "<group>"; };
+		AE48C204132E6077005EA1DC /* mmontesanoI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesanoI.png; sourceTree = "<group>"; };
+		AE48C205132E6077005EA1DC /* mmontesanoIHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesanoIHD.png; sourceTree = "<group>"; };
+		AE48C206132E6077005EA1DC /* mmontesanoO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesanoO.png; sourceTree = "<group>"; };
+		AE48C207132E6077005EA1DC /* mmontesanoOHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesanoOHD.png; sourceTree = "<group>"; };
+		AE48C208132E6077005EA1DC /* mtrastevereI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevereI.png; sourceTree = "<group>"; };
+		AE48C209132E6077005EA1DC /* mtrastevereIHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevereIHD.png; sourceTree = "<group>"; };
+		AE48C20A132E6077005EA1DC /* mtrastevereO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevereO.png; sourceTree = "<group>"; };
+		AE48C20B132E6077005EA1DC /* mtrastevereOHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevereOHD.png; sourceTree = "<group>"; };
+		AE48C20C132E6077005EA1DC /* nuovaI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuovaI.png; sourceTree = "<group>"; };
+		AE48C20D132E6077005EA1DC /* nuovaIHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuovaIHD.png; sourceTree = "<group>"; };
+		AE48C20E132E6077005EA1DC /* nuovaO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuovaO.png; sourceTree = "<group>"; };
+		AE48C20F132E6077005EA1DC /* nuovaOHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuovaOHD.png; sourceTree = "<group>"; };
+		AE48C210132E6077005EA1DC /* pietroI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietroI.png; sourceTree = "<group>"; };
+		AE48C211132E6077005EA1DC /* pietroIHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietroIHD.png; sourceTree = "<group>"; };
+		AE48C212132E6077005EA1DC /* pietroO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietroO.png; sourceTree = "<group>"; };
+		AE48C213132E6077005EA1DC /* pietroOHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietroOHD.png; sourceTree = "<group>"; };
+		AE48C22C132E6397005EA1DC /* lorenzoIHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoIHD.png; sourceTree = "<group>"; };
+		AE48C22D132E6397005EA1DC /* lorenzoOHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoOHD.png; sourceTree = "<group>"; };
+		AE48C23E132EC112005EA1DC /* ceciliaIHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaIHD.png; sourceTree = "<group>"; };
+		AE48C23F132EC113005EA1DC /* ceciliaOHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaOHD.png; sourceTree = "<group>"; };
 		AE51B910132A145F00EC32C1 /* APAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAttribute.h; sourceTree = "<group>"; };
 		AE51B911132A145F00EC32C1 /* APAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAttribute.m; sourceTree = "<group>"; };
 		AE51B912132A145F00EC32C1 /* APDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDocument.h; sourceTree = "<group>"; };
@@ -293,8 +325,6 @@
 		AE51B93D132A145F00EC32C1 /* TTTableSubtitleItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTableSubtitleItemStyle.m; sourceTree = "<group>"; };
 		AE51B95B132A175100EC32C1 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		AE51B95C132A175100EC32C1 /* cecilia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cecilia.png; sourceTree = "<group>"; };
-		AE51B95D132A175100EC32C1 /* ceciliaI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaI.png; sourceTree = "<group>"; };
-		AE51B95E132A175100EC32C1 /* ceciliaO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaO.png; sourceTree = "<group>"; };
 		AE51B95F132A175100EC32C1 /* church icon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "church icon57x57.png"; sourceTree = "<group>"; };
 		AE51B960132A175100EC32C1 /* gesu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gesu.png; sourceTree = "<group>"; };
 		AE51B961132A175100EC32C1 /* giovanni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giovanni.png; sourceTree = "<group>"; };
@@ -304,7 +334,7 @@
 		AE51B965132A175100EC32C1 /* luigi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = luigi.png; sourceTree = "<group>"; };
 		AE51B966132A175100EC32C1 /* maggiore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maggiore.png; sourceTree = "<group>"; };
 		AE51B967132A175100EC32C1 /* marcello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marcello.png; sourceTree = "<group>"; };
-		AE51B968132A175100EC32C1 /* mariatrastevere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mariatrastevere.png; sourceTree = "<group>"; };
+		AE51B968132A175100EC32C1 /* mtrastevere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevere.png; sourceTree = "<group>"; };
 		AE51B969132A175100EC32C1 /* mmontesano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesano.png; sourceTree = "<group>"; };
 		AE51B96A132A175100EC32C1 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
 		AE51B96B132A175100EC32C1 /* Note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Note.png; sourceTree = "<group>"; };
@@ -326,10 +356,6 @@
 		AE51B998132A189900EC32C1 /* maggioreOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = maggioreOutside.html; sourceTree = "<group>"; };
 		AE51B999132A189900EC32C1 /* marcelloInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = marcelloInside.html; sourceTree = "<group>"; };
 		AE51B99A132A189900EC32C1 /* marcelloOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = marcelloOutside.html; sourceTree = "<group>"; };
-		AE51B99B132A189900EC32C1 /* mariamontesanoInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mariamontesanoInside.html; sourceTree = "<group>"; };
-		AE51B99C132A189900EC32C1 /* mariamontesanoOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mariamontesanoOutside.html; sourceTree = "<group>"; };
-		AE51B99D132A189900EC32C1 /* mariatrastevereInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mariatrastevereInside.html; sourceTree = "<group>"; };
-		AE51B99E132A189900EC32C1 /* mariatrastevereOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mariatrastevereOutside.html; sourceTree = "<group>"; };
 		AE51B99F132A189900EC32C1 /* mmontesanoInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mmontesanoInside.html; sourceTree = "<group>"; };
 		AE51B9A0132A189900EC32C1 /* mmontesanoOutside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mmontesanoOutside.html; sourceTree = "<group>"; };
 		AE51B9A1132A189900EC32C1 /* mtrastevereInside.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mtrastevereInside.html; sourceTree = "<group>"; };
@@ -342,16 +368,6 @@
 		AE51B9C1132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Palestrina and the Counter-reformation.mp3"; sourceTree = "<group>"; };
 		AE51B9C2132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Palestrina in St. Peter's.mp3"; sourceTree = "<group>"; };
 		AE51B9C3132A18CA00EC32C1 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
-		AE51B9C9132A195300EC32C1 /* lorenzoI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoI.png; sourceTree = "<group>"; };
-		AE51B9CA132A195300EC32C1 /* lorenzoO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoO.png; sourceTree = "<group>"; };
-		AE51B9CB132A195300EC32C1 /* mmontesanoI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesanoI.png; sourceTree = "<group>"; };
-		AE51B9CC132A195300EC32C1 /* mmontesanoO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmontesanoO.png; sourceTree = "<group>"; };
-		AE51B9CD132A195300EC32C1 /* mtrastevereI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevereI.png; sourceTree = "<group>"; };
-		AE51B9CE132A195300EC32C1 /* mtrastevereO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mtrastevereO.png; sourceTree = "<group>"; };
-		AE51B9CF132A195300EC32C1 /* nuovaI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuovaI.png; sourceTree = "<group>"; };
-		AE51B9D0132A195300EC32C1 /* nuovaO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuovaO.png; sourceTree = "<group>"; };
-		AE51B9D1132A195300EC32C1 /* pietroI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietroI.png; sourceTree = "<group>"; };
-		AE51B9D2132A195300EC32C1 /* pietroO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietroO.png; sourceTree = "<group>"; };
 		AE51B9DD132A1A0800EC32C1 /* ChurchPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchPlayerViewController.m; sourceTree = "<group>"; };
 		AE51B9DE132A1A0800EC32C1 /* ChurchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurchViewController.m; sourceTree = "<group>"; };
 		AE51B9DF132A1A0800EC32C1 /* TableControlsTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableControlsTestController.m; sourceTree = "<group>"; };
@@ -593,7 +609,7 @@
 				AE51B965132A175100EC32C1 /* luigi.png */,
 				AE51B966132A175100EC32C1 /* maggiore.png */,
 				AE51B967132A175100EC32C1 /* marcello.png */,
-				AE51B968132A175100EC32C1 /* mariatrastevere.png */,
+				AE51B968132A175100EC32C1 /* mtrastevere.png */,
 				AE51B969132A175100EC32C1 /* mmontesano.png */,
 				AE51B96C132A175100EC32C1 /* nuova.png */,
 				AE51B96D132A175100EC32C1 /* pietro.png */,
@@ -649,8 +665,6 @@
 				AE51B996132A189900EC32C1 /* luigiOutside.html */,
 				AE51B998132A189900EC32C1 /* maggioreOutside.html */,
 				AE51B99A132A189900EC32C1 /* marcelloOutside.html */,
-				AE51B99C132A189900EC32C1 /* mariamontesanoOutside.html */,
-				AE51B99E132A189900EC32C1 /* mariatrastevereOutside.html */,
 				AE51B9A0132A189900EC32C1 /* mmontesanoOutside.html */,
 				AE51B9A2132A189900EC32C1 /* mtrastevereOutside.html */,
 				AE51B9A4132A189900EC32C1 /* nuovaOutside.html */,
@@ -669,8 +683,6 @@
 				AE51B995132A189900EC32C1 /* luigiInside.html */,
 				AE51B997132A189900EC32C1 /* maggioreInside.html */,
 				AE51B999132A189900EC32C1 /* marcelloInside.html */,
-				AE51B99B132A189900EC32C1 /* mariamontesanoInside.html */,
-				AE51B99D132A189900EC32C1 /* mariatrastevereInside.html */,
 				AE51B99F132A189900EC32C1 /* mmontesanoInside.html */,
 				AE51B9A1132A189900EC32C1 /* mtrastevereInside.html */,
 				AE51B9A3132A189900EC32C1 /* nuovaInside.html */,
@@ -694,18 +706,30 @@
 		AE51B9C8132A191F00EC32C1 /* general */ = {
 			isa = PBXGroup;
 			children = (
-				AE51B9C9132A195300EC32C1 /* lorenzoI.png */,
-				AE51B9CA132A195300EC32C1 /* lorenzoO.png */,
-				AE51B9CB132A195300EC32C1 /* mmontesanoI.png */,
-				AE51B9CC132A195300EC32C1 /* mmontesanoO.png */,
-				AE51B9CD132A195300EC32C1 /* mtrastevereI.png */,
-				AE51B9CE132A195300EC32C1 /* mtrastevereO.png */,
-				AE51B9CF132A195300EC32C1 /* nuovaI.png */,
-				AE51B9D0132A195300EC32C1 /* nuovaO.png */,
-				AE51B9D1132A195300EC32C1 /* pietroI.png */,
-				AE51B9D2132A195300EC32C1 /* pietroO.png */,
-				AE51B95D132A175100EC32C1 /* ceciliaI.png */,
-				AE51B95E132A175100EC32C1 /* ceciliaO.png */,
+				AE48C23E132EC112005EA1DC /* ceciliaIHD.png */,
+				AE48C23F132EC113005EA1DC /* ceciliaOHD.png */,
+				AE48C22C132E6397005EA1DC /* lorenzoIHD.png */,
+				AE48C22D132E6397005EA1DC /* lorenzoOHD.png */,
+				AE48C1FC132E6077005EA1DC /* ceciliaI.png */,
+				AE48C1FE132E6077005EA1DC /* ceciliaO.png */,
+				AE48C200132E6077005EA1DC /* lorenzoI.png */,
+				AE48C202132E6077005EA1DC /* lorenzoO.png */,
+				AE48C204132E6077005EA1DC /* mmontesanoI.png */,
+				AE48C205132E6077005EA1DC /* mmontesanoIHD.png */,
+				AE48C206132E6077005EA1DC /* mmontesanoO.png */,
+				AE48C207132E6077005EA1DC /* mmontesanoOHD.png */,
+				AE48C208132E6077005EA1DC /* mtrastevereI.png */,
+				AE48C209132E6077005EA1DC /* mtrastevereIHD.png */,
+				AE48C20A132E6077005EA1DC /* mtrastevereO.png */,
+				AE48C20B132E6077005EA1DC /* mtrastevereOHD.png */,
+				AE48C20C132E6077005EA1DC /* nuovaI.png */,
+				AE48C20D132E6077005EA1DC /* nuovaIHD.png */,
+				AE48C20E132E6077005EA1DC /* nuovaO.png */,
+				AE48C20F132E6077005EA1DC /* nuovaOHD.png */,
+				AE48C210132E6077005EA1DC /* pietroI.png */,
+				AE48C211132E6077005EA1DC /* pietroIHD.png */,
+				AE48C212132E6077005EA1DC /* pietroO.png */,
+				AE48C213132E6077005EA1DC /* pietroOHD.png */,
 			);
 			name = general;
 			sourceTree = "<group>";
@@ -1001,8 +1025,6 @@
 				AE983FC1132A125800F84546 /* InfoPlist.strings in Resources */,
 				AE51B96F132A175100EC32C1 /* arrow.png in Resources */,
 				AE51B970132A175100EC32C1 /* cecilia.png in Resources */,
-				AE51B971132A175100EC32C1 /* ceciliaI.png in Resources */,
-				AE51B972132A175100EC32C1 /* ceciliaO.png in Resources */,
 				AE51B973132A175100EC32C1 /* church icon57x57.png in Resources */,
 				AE51B974132A175100EC32C1 /* gesu.png in Resources */,
 				AE51B975132A175100EC32C1 /* giovanni.png in Resources */,
@@ -1012,7 +1034,7 @@
 				AE51B979132A175100EC32C1 /* luigi.png in Resources */,
 				AE51B97A132A175100EC32C1 /* maggiore.png in Resources */,
 				AE51B97B132A175100EC32C1 /* marcello.png in Resources */,
-				AE51B97C132A175100EC32C1 /* mariatrastevere.png in Resources */,
+				AE51B97C132A175100EC32C1 /* mtrastevere.png in Resources */,
 				AE51B97D132A175100EC32C1 /* mmontesano.png in Resources */,
 				AE51B97E132A175100EC32C1 /* music.png in Resources */,
 				AE51B97F132A175100EC32C1 /* Note.png in Resources */,
@@ -1034,10 +1056,6 @@
 				AE51B9B0132A189900EC32C1 /* maggioreOutside.html in Resources */,
 				AE51B9B1132A189900EC32C1 /* marcelloInside.html in Resources */,
 				AE51B9B2132A189900EC32C1 /* marcelloOutside.html in Resources */,
-				AE51B9B3132A189900EC32C1 /* mariamontesanoInside.html in Resources */,
-				AE51B9B4132A189900EC32C1 /* mariamontesanoOutside.html in Resources */,
-				AE51B9B5132A189900EC32C1 /* mariatrastevereInside.html in Resources */,
-				AE51B9B6132A189900EC32C1 /* mariatrastevereOutside.html in Resources */,
 				AE51B9B7132A189900EC32C1 /* mmontesanoInside.html in Resources */,
 				AE51B9B8132A189900EC32C1 /* mmontesanoOutside.html in Resources */,
 				AE51B9B9132A189900EC32C1 /* mtrastevereInside.html in Resources */,
@@ -1050,18 +1068,32 @@
 				AE51B9C5132A18CA00EC32C1 /* Palestrina and the Counter-reformation.mp3 in Resources */,
 				AE51B9C6132A18CA00EC32C1 /* Palestrina in St. Peter's.mp3 in Resources */,
 				AE51B9C7132A18CA00EC32C1 /* sample.mp3 in Resources */,
-				AE51B9D3132A195300EC32C1 /* lorenzoI.png in Resources */,
-				AE51B9D4132A195300EC32C1 /* lorenzoO.png in Resources */,
-				AE51B9D5132A195300EC32C1 /* mmontesanoI.png in Resources */,
-				AE51B9D6132A195300EC32C1 /* mmontesanoO.png in Resources */,
-				AE51B9D7132A195300EC32C1 /* mtrastevereI.png in Resources */,
-				AE51B9D8132A195300EC32C1 /* mtrastevereO.png in Resources */,
-				AE51B9D9132A195300EC32C1 /* nuovaI.png in Resources */,
-				AE51B9DA132A195300EC32C1 /* nuovaO.png in Resources */,
-				AE51B9DB132A195300EC32C1 /* pietroI.png in Resources */,
-				AE51B9DC132A195300EC32C1 /* pietroO.png in Resources */,
 				AE51B9E5132A1A5B00EC32C1 /* church.css in Resources */,
 				AE51B9E6132A1A5B00EC32C1 /* rome.css in Resources */,
+				AE48C214132E6077005EA1DC /* ceciliaI.png in Resources */,
+				AE48C216132E6077005EA1DC /* ceciliaO.png in Resources */,
+				AE48C218132E6077005EA1DC /* lorenzoI.png in Resources */,
+				AE48C21A132E6077005EA1DC /* lorenzoO.png in Resources */,
+				AE48C21C132E6077005EA1DC /* mmontesanoI.png in Resources */,
+				AE48C21D132E6077005EA1DC /* mmontesanoIHD.png in Resources */,
+				AE48C21E132E6077005EA1DC /* mmontesanoO.png in Resources */,
+				AE48C21F132E6077005EA1DC /* mmontesanoOHD.png in Resources */,
+				AE48C220132E6077005EA1DC /* mtrastevereI.png in Resources */,
+				AE48C221132E6077005EA1DC /* mtrastevereIHD.png in Resources */,
+				AE48C222132E6077005EA1DC /* mtrastevereO.png in Resources */,
+				AE48C223132E6077005EA1DC /* mtrastevereOHD.png in Resources */,
+				AE48C224132E6077005EA1DC /* nuovaI.png in Resources */,
+				AE48C225132E6077005EA1DC /* nuovaIHD.png in Resources */,
+				AE48C226132E6077005EA1DC /* nuovaO.png in Resources */,
+				AE48C227132E6077005EA1DC /* nuovaOHD.png in Resources */,
+				AE48C228132E6077005EA1DC /* pietroI.png in Resources */,
+				AE48C229132E6077005EA1DC /* pietroIHD.png in Resources */,
+				AE48C22A132E6077005EA1DC /* pietroO.png in Resources */,
+				AE48C22B132E6077005EA1DC /* pietroOHD.png in Resources */,
+				AE48C22E132E6397005EA1DC /* lorenzoIHD.png in Resources */,
+				AE48C22F132E6397005EA1DC /* lorenzoOHD.png in Resources */,
+				AE48C240132EC115005EA1DC /* ceciliaIHD.png in Resources */,
+				AE48C241132EC115005EA1DC /* ceciliaOHD.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -108,7 +108,7 @@
 		<name>S Maria in Montesano</name>
 		<description>big church</description>
 		<icon>mmontesano.png</icon>
-		<contentPage>mariamontesano</contentPage>
+		<contentPage>mmontesano</contentPage>
 		<latitude>41.90999</latitude>
 		<longitude>12.476907</longitude>
 		<songs>
@@ -121,7 +121,7 @@
 		<name>S Maria in Trastevere</name>
 		<description>big church</description>
 		<icon>mariatrastevere.png</icon>
-		<contentPage>mariatrastevere</contentPage>
+		<contentPage>mtrastevere</contentPage>
 		<latitude>41.889377</latitude>
 		<longitude>12.470217</longitude>
 		<songs>
@@ -131,7 +131,7 @@
 		</songs>
 	</church>
 	<church id="maggiore">
-		<name>S Maria maggiore</name>
+		<name>S Maria Maggiore</name>
 		<description>big church</description>
 		<icon>maggiore.png</icon>
 		<contentPage>maggiore</contentPage>

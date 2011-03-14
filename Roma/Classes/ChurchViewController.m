@@ -26,7 +26,7 @@ BOOL outside = NO;
 		
 		self.title = _church.name;
 		
-		//TTDPRINT(@"Church View started: %@",_churchName);
+		TTDPRINT(@"Church View started: %@",_churchName);
 	}
 	
 	return self;
