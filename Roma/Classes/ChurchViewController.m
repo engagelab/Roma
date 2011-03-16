@@ -27,6 +27,14 @@ BOOL outside = NO;
 		
 		
 		self.title = _church.name;
+        
+        self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc]  
+                                                 initWithImage: [UIImage imageNamed:@"arrow.png"]
+                                                 style:UIBarButtonItemStyleBordered  
+                                                 target:nil
+                                                 action:nil] autorelease];
+        
+
 		
 		TTDPRINT(@"Church View started: %@",_churchName);
 	}
@@ -46,17 +54,18 @@ BOOL outside = NO;
 - (void)loadView {
 	[super loadView];
 
-	self.title = [NSString stringWithFormat:@"Outside %@", [self.churchName capitalizedString]];
-			
 
+    
+	self.title = [NSString stringWithFormat:@"Outside %@", [self.churchName capitalizedString]];
+    self.navigationBarTintColor = TTSTYLEVAR(navigationBarTintColor);
+    self.navigationBarStyle = UIBarStyleDefault;
+    /*
+    TTButton *button = [TTButton buttonWithStyle:@"toolbarBackButton:"];
+    [button sizeToFit];
+	self.navigationItem.rightBarButtonItem =  button;
 	
-	//self.navigationBarTintColor = [UIColor colorWithHue:0.6 saturation:0.33 brightness:0.69 alpha:0];
-	self.navigationBarStyle = UIBarStyleDefault;
-	/*
-	self.navigationItem.backBarButtonItem =
-	[[[UIBarButtonItem alloc] initWithTitle:@"Churches" style:UIBarButtonItemStyleBordered
-									 target:nil action:nil] autorelease];
-	 */
+	*/
+		 
 	_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 0, 320, 375)];
 	_webView.autoresizesSubviews = YES;
 	_webView.autoresizingMask=(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth);
@@ -85,9 +94,7 @@ BOOL outside = NO;
 	
 		_churchToolBar =  [[UIToolbar alloc] initWithFrame:  CGRectMake(0, 372, 320, 55)]; 
     
-    TTStyleSheet *ttstyle = TTStyleSheet.globalStyleSheet;
-    StyleSheet *ss = (StyleSheet *)ttstyle;
-    _churchToolBar.tintColor = [ss navigationBarTintColor];
+       _churchToolBar.tintColor = TTSTYLEVAR(navigationBarTintColor);
    
     
 		_flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil ];
@@ -112,16 +119,17 @@ BOOL outside = NO;
 
 - (void) viewWillAppear:(BOOL)animated {
 	
-    /*
-	self.navigationBarTintColor = [UIColor colorWithHue:0.6 saturation:0.33 brightness:0.69 alpha:0];
-	self.navigationBarTintColor = [UIColor whiteColor];
-	self.navigationBarStyle = UIBarStyleDefault;
-     */
+
+    self.navigationBarTintColor = TTSTYLEVAR(navigationBarTintColor);
 	
+    [super viewWillAppear:animated];
+    
 	TTDPRINT(@"viewWillAppear");
 }
  
 - (void) viewDidLoad {
+    
+    [super viewDidLoad];
     /*
 	self.navigationBarTintColor = [UIColor colorWithHue:0.6 saturation:0.33 brightness:0.69 alpha:0];
 	self.navigationBarStyle = UIBarStyleDefault;
@@ -131,15 +139,11 @@ BOOL outside = NO;
 
 - (void) viewWillDisappear:(BOOL)animated {
 	
-	
-	 UIBarButtonItem *newBackButton = [[[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed:@"arrow.png"]  style: UIBarButtonItemStyleBordered target: nil action: nil] retain];
-	 
-	[[self navigationItem] setBackBarButtonItem: newBackButton  ];
+
 	 //[self.navigationItem.backBarButtonItem retain];
 	// [newBackButton release];
 	 
 
-	
 }
 
 - (void) enterChurch {

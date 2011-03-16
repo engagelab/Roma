@@ -20,9 +20,11 @@
 
         
 //        self.title = @"Three20 Catalog";
-//        self.navigationItem.backBarButtonItem =
-//        [[[UIBarButtonItem alloc] initWithTitle:@"Catalog" style:UIBarButtonItemStyleBordered
-//                                         target:nil action:nil] autorelease];
+        self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc]  
+                                                  initWithImage: [UIImage imageNamed:@"arrow.png"]
+                                                  style:UIBarButtonItemStyleBordered  
+                                                  target:nil
+                                                  action:nil] autorelease];
 //        
 //        self.tableViewStyle = UITableViewStyleGrouped;
     }
@@ -49,8 +51,7 @@
 	
 	_toolbar =  [[UIToolbar alloc] initWithFrame:  CGRectMake(0, 372, 320, 44)]; 
 	
-    TTDefaultStyleSheet *ttstyle = TTStyleSheet.globalStyleSheet;
-    _toolbar.tintColor = [ttstyle navigationBarTintColor];
+    _toolbar.tintColor = TTSTYLEVAR(navigationBarTintColor);
     
 	UIBarButtonItem *flexItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil ] autorelease];
 	
@@ -75,7 +76,7 @@
 	_segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	_segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
 	_segmentedControl.frame = CGRectMake(61, 8, 239, 30);
-    _segmentedControl.tintColor = ttstyle.navigationBarTintColor;
+    _segmentedControl.tintColor = TTSTYLEVAR(navigationBarTintColor);
 	[_segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
 	
 	UIBarButtonItem *pLogOut = [[UIBarButtonItem alloc] initWithCustomView:_segmentedControl];

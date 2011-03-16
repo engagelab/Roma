@@ -46,6 +46,7 @@
 //  return [UIFont fontWithName:@"Georgia-Bold" size:14];
 //}
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (UIColor*)tablePlainBackgroundColor {
       return RGBCOLOR(251, 246, 243);
@@ -75,9 +76,9 @@
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (UIColor*)toolbarTintColor {
-   return RGBCOLOR(0, 102, 204);
-}
+- (UIColor*)navigationBarTintColorDark {  
+    return RGBCOLOR(35, 33, 43);  
+} 
 
 
 

@@ -24,7 +24,7 @@ UITableView *_tableView;
 - (id)initWithChurchName:(NSString*)churchName {
 	[super self];
 	
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		self.churchName = churchName;
 		self.dataSource = [[[SongDataSource alloc] initWithChurchName:churchName] autorelease];
 
@@ -41,7 +41,11 @@ UITableView *_tableView;
 	
 	
 	self.title = [NSString stringWithFormat:@"Inside %@", [self.churchName capitalizedString]];
-	self.navigationBarTintColor = [UIColor blackColor];
+    
+//    UINavigationBar* bar = self.navigationController.navigationBar;
+//    bar.tintColor = [UIColor blackColor];
+//    bar.barStyle = _navigationBarStyle;
+//    .navigationBarTintColor = 
 	//self.tableView.frame = CGRectMake(0,0,320,300);
 	
 	/*
@@ -293,6 +297,9 @@ UITableView *_tableView;
 
 
 - (void)viewWillAppear:(BOOL)animated {
+       
+    self.navigationBarTintColor =  TTSTYLEVAR(navigationBarTintColorDark);
+    
     [super viewWillAppear:animated];
 }
 

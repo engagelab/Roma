@@ -18,7 +18,8 @@
 
 
 @interface StyleSheet : TTDefaultStyleSheet {
-
+    
 }
 
+@property(nonatomic,readonly) UIColor* navigationBarTintColorDark;  
 @end

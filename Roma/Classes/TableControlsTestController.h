@@ -7,6 +7,7 @@
 	MKMapView *_mapView;
 	UISegmentedControl *_segmentedControl;
 	CLLocationManager *locManager;
+
 }
 @property (retain) CLLocationManager *locManager;
 
