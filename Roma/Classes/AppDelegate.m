@@ -15,7 +15,7 @@
 #import "ChurchSingleton.h"
 #import "ChurchViewController.h"
 #import "ChurchPlayerViewController.h"
-
+#import "StyleSheet.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,14 +25,17 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
-	
+
+//  [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
+  [application setStatusBarStyle:UIStatusBarStyleBlackOpaque];
   [TTExtensionLoader loadAllExtensions];
     
   [self parseXML];
 	
+  [TTStyleSheet setGlobalStyleSheet:[[[StyleSheet alloc] init] autorelease]];  
 	
   TTNavigator* navigator = [TTNavigator navigator];
-  navigator.persistenceMode = TTNavigatorPersistenceModeAll;
+  //navigator.persistenceMode = TTNavigatorPersistenceModeAll;
   navigator.window = [[[UIWindow alloc] initWithFrame:TTScreenBounds()] autorelease];
 	
   TTURLMap* map = navigator.URLMap;

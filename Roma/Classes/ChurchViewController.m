@@ -8,6 +8,8 @@
 
 #import "ChurchViewController.h"
 #import "ChurchSingleton.h"
+#import "TTStyleSheet.h"
+#import "StyleSheet.h"
 
 @implementation ChurchViewController
 
@@ -48,7 +50,7 @@ BOOL outside = NO;
 			
 
 	
-	self.navigationBarTintColor = [UIColor colorWithHue:0.6 saturation:0.33 brightness:0.69 alpha:0];
+	//self.navigationBarTintColor = [UIColor colorWithHue:0.6 saturation:0.33 brightness:0.69 alpha:0];
 	self.navigationBarStyle = UIBarStyleDefault;
 	/*
 	self.navigationItem.backBarButtonItem =
@@ -59,7 +61,7 @@ BOOL outside = NO;
 	_webView.autoresizesSubviews = YES;
 	_webView.autoresizingMask=(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth);
 	//set the web view delegates for the web view to be itself
-	[_webView setDelegate:self];
+//	[_webView setDelegate:self];
 	//Set the URL to go to for your UIWebView
 
 	
@@ -82,7 +84,12 @@ BOOL outside = NO;
 	[_webView sizeToFit];
 	
 		_churchToolBar =  [[UIToolbar alloc] initWithFrame:  CGRectMake(0, 372, 320, 55)]; 
-	
+    
+    TTStyleSheet *ttstyle = TTStyleSheet.globalStyleSheet;
+    StyleSheet *ss = (StyleSheet *)ttstyle;
+    _churchToolBar.tintColor = [ss navigationBarTintColor];
+   
+    
 		_flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil ];
 	
 		_enterChurchButton = [[[UIBarButtonItem alloc]  
@@ -105,16 +112,20 @@ BOOL outside = NO;
 
 - (void) viewWillAppear:(BOOL)animated {
 	
+    /*
 	self.navigationBarTintColor = [UIColor colorWithHue:0.6 saturation:0.33 brightness:0.69 alpha:0];
 	self.navigationBarTintColor = [UIColor whiteColor];
 	self.navigationBarStyle = UIBarStyleDefault;
+     */
 	
 	TTDPRINT(@"viewWillAppear");
 }
  
 - (void) viewDidLoad {
+    /*
 	self.navigationBarTintColor = [UIColor colorWithHue:0.6 saturation:0.33 brightness:0.69 alpha:0];
 	self.navigationBarStyle = UIBarStyleDefault;
+     */
 	TTDPRINT(@"viewDidLoad");
 }
 

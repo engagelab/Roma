@@ -13,7 +13,7 @@
 // NSObject
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.autoresizesForKeyboard = YES;
         self.variableHeightRows = YES;
         self.dataSource = [[[ChurchDataSource alloc] init] autorelease];
@@ -42,17 +42,20 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.title = @"Churches";
+	self.title = @"Roma Churches";
 	
 	self.tableView.frame = CGRectMake(0,0,320,372);
 	//self.navigationBarTintColor = [UIColor whiteColor];
 	
 	_toolbar =  [[UIToolbar alloc] initWithFrame:  CGRectMake(0, 372, 320, 44)]; 
 	
+    TTDefaultStyleSheet *ttstyle = TTStyleSheet.globalStyleSheet;
+    _toolbar.tintColor = [ttstyle navigationBarTintColor];
+    
 	UIBarButtonItem *flexItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil ] autorelease];
 	
 	UIBarButtonItem *anotherButton = [[[UIBarButtonItem alloc]  
-									   initWithImage:[UIImage imageNamed:@"locator.png"]
+									   initWithImage:[UIImage imageNamed:@"Location.png"]
 									   style:UIBarButtonItemStyleBordered  
 									   target:self  
 									   action:@selector(updateTableLocations:)] autorelease];
@@ -72,6 +75,7 @@
 	_segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	_segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
 	_segmentedControl.frame = CGRectMake(61, 8, 239, 30);
+    _segmentedControl.tintColor = ttstyle.navigationBarTintColor;
 	[_segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
 	
 	UIBarButtonItem *pLogOut = [[UIBarButtonItem alloc] initWithCustomView:_segmentedControl];
@@ -195,17 +199,6 @@
 	NSMutableArray *myArray = [[[NSMutableArray alloc] init] autorelease];
 	
 	NSMutableArray *churches = [[ChurchSingleton sharedInstance] churches];
-	/*
-	Church *church = [churches objectAtIndex:0];
-	
-	CLLocationCoordinate2D pinlocation;
-	pinlocation.latitude = [church.latitude doubleValue];
-	pinlocation.longitude  = [church.longitude doubleValue];
-	PlaceMark *poi = [[PlaceMark alloc] initWithCoordinate:pinlocation];
-	
-	[_mapView addAnnotation:poi];
-	*/
-
 	
     [_mapView setRegion:region animated:TRUE];  
     [_mapView regionThatFits:region];  
@@ -219,7 +212,7 @@
 		PlaceMark *poi = [[PlaceMark alloc] initWithCoordinate:pinlocation];
 		poi.churchName = church.churchId;
 		poi.title = church.name;
-		//poi.subtitle = @"s t";
+
 		
 		NSLog(@"long %@ lat %@",church.longitude, church.latitude);
 		
@@ -270,7 +263,7 @@
 	
 	PlaceMark *pm = (PlaceMark *)view.annotation;
 	
-	NSLog(@"churchName %@",pm.churchName);
+	//NSLog(@"churchName %@",pm.churchName);
 	
 	TTOpenURL([NSString stringWithFormat:@"tt://outsideChurchView/%@", pm.churchName]);
 
@@ -284,8 +277,8 @@
 - (void) updateTableLocations : (id) sender {
 
 	self.locManager = [[[CLLocationManager alloc] init] autorelease];
-	if (!self.locManager.locationServicesEnabled) {
-		NSLog(@"user has opted out of location services");
+	if (![CLLocationManager locationServicesEnabled]) {
+		//NSLog(@"user has opted out of location services");
 		return;
 	}
 	
@@ -306,7 +299,6 @@
 		case 1:
 			_mapView.hidden = NO;
 		    self.tableView.hidden = YES;
-			
 			break;
 		default: break;
 	}

@@ -40,6 +40,8 @@
 		AE48C22F132E6397005EA1DC /* lorenzoOHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C22D132E6397005EA1DC /* lorenzoOHD.png */; };
 		AE48C240132EC115005EA1DC /* ceciliaIHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C23E132EC112005EA1DC /* ceciliaIHD.png */; };
 		AE48C241132EC115005EA1DC /* ceciliaOHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C23F132EC113005EA1DC /* ceciliaOHD.png */; };
+		AE48C2B6132EC350005EA1DC /* StyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = AE48C2B5132EC34F005EA1DC /* StyleSheet.m */; };
+		AE48C2B8132F6FB4005EA1DC /* Location.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C2B7132F6FB4005EA1DC /* Location.png */; };
 		AE51B93E132A145F00EC32C1 /* APAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B911132A145F00EC32C1 /* APAttribute.m */; };
 		AE51B93F132A145F00EC32C1 /* APDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B913132A145F00EC32C1 /* APDocument.m */; };
 		AE51B940132A145F00EC32C1 /* APElement.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51B915132A145F00EC32C1 /* APElement.m */; };
@@ -310,6 +312,9 @@
 		AE48C22D132E6397005EA1DC /* lorenzoOHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoOHD.png; sourceTree = "<group>"; };
 		AE48C23E132EC112005EA1DC /* ceciliaIHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaIHD.png; sourceTree = "<group>"; };
 		AE48C23F132EC113005EA1DC /* ceciliaOHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaOHD.png; sourceTree = "<group>"; };
+		AE48C2B4132EC34F005EA1DC /* StyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleSheet.h; sourceTree = "<group>"; };
+		AE48C2B5132EC34F005EA1DC /* StyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleSheet.m; sourceTree = "<group>"; };
+		AE48C2B7132F6FB4005EA1DC /* Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Location.png; sourceTree = "<group>"; };
 		AE51B910132A145F00EC32C1 /* APAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAttribute.h; sourceTree = "<group>"; };
 		AE51B911132A145F00EC32C1 /* APAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAttribute.m; sourceTree = "<group>"; };
 		AE51B912132A145F00EC32C1 /* APDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDocument.h; sourceTree = "<group>"; };
@@ -620,6 +625,7 @@
 		AE51B984132A178100EC32C1 /* basic icons */ = {
 			isa = PBXGroup;
 			children = (
+				AE48C2B7132F6FB4005EA1DC /* Location.png */,
 				AE51B963132A175100EC32C1 /* locator.png */,
 				AE51B95B132A175100EC32C1 /* arrow.png */,
 				AE51B95F132A175100EC32C1 /* church icon57x57.png */,
@@ -647,6 +653,8 @@
 		AE51B986132A17D800EC32C1 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				AE48C2B4132EC34F005EA1DC /* StyleSheet.h */,
+				AE48C2B5132EC34F005EA1DC /* StyleSheet.m */,
 				AE51B959132A15E100EC32C1 /* table */,
 				AE51B958132A15A600EC32C1 /* map */,
 				AE51B957132A14FF00EC32C1 /* controller */,
@@ -778,8 +786,8 @@
 			isa = PBXGroup;
 			children = (
 				AE51B986132A17D800EC32C1 /* src */,
-				AE51B985132A17C400EC32C1 /* resources */,
 				AE51B90F132A145F00EC32C1 /* Classes */,
+				AE51B985132A17C400EC32C1 /* resources */,
 				AE983FBD132A125800F84546 /* Supporting Files */,
 			);
 			path = Roma;
@@ -1094,6 +1102,7 @@
 				AE48C22F132E6397005EA1DC /* lorenzoOHD.png in Resources */,
 				AE48C240132EC115005EA1DC /* ceciliaIHD.png in Resources */,
 				AE48C241132EC115005EA1DC /* ceciliaOHD.png in Resources */,
+				AE48C2B8132F6FB4005EA1DC /* Location.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1146,6 +1155,7 @@
 				AE51B9FC132A1AFD00EC32C1 /* AppDelegate.m in Sources */,
 				AE51BA57132A226C00EC32C1 /* ChurchSingleton.m in Sources */,
 				AE51BA59132A22B000EC32C1 /* main.m in Sources */,
+				AE48C2B6132EC350005EA1DC /* StyleSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1231,7 +1241,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1251,7 +1261,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1275,7 +1285,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Roma/Roma-Prefix.pch";
 				INFOPLIST_FILE = "Roma/Roma-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1288,7 +1300,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Roma/Roma-Prefix.pch";
 				INFOPLIST_FILE = "Roma/Roma-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
