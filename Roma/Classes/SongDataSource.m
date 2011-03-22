@@ -16,12 +16,28 @@
 
 @synthesize churchModel = _churchModel;
 @synthesize churchName = _churchName;
+@synthesize songsTemp;
 
 - (id)initWithChurchName:(NSString*)churchName {
 	if ((self = [super init])) {
 		self.churchName = churchName;
 		_churchModel = [[ChurchModel alloc] init];
 		self.model = _churchModel;
+        
+        songsTemp = [[NSMutableArray alloc] init];
+        
+        for (Church *church in _churchModel.churches) {
+            
+            if( [church.churchId isEqualToString: self.churchName ] ) {
+                //trasverse all the sonds
+                for (Song *song in church.songs) {
+                    //NSString *str = [song.name stringByAppendingString:@".mp3"];
+                    [songsTemp addObject:song.name];
+                }
+            }
+
+        }
+        
 	}
 	return self;
 }
@@ -31,7 +47,7 @@
 - (void)tableViewDidLoadModel:(UITableView*)tableView {
 	self.items = [NSMutableArray array];
     
-		_churchModel = [[ChurchModel alloc] init];
+//		_churchModel = [[ChurchModel alloc] init];
 		self.model = _churchModel;	
 	
 	
@@ -40,7 +56,6 @@
 		if( [church.churchId isEqualToString: self.churchName ] ) {
 		//trasverse all the sonds
 			for (Song *song in church.songs) {
-				
 				TTTableButton *item =[TTTableButton itemWithText:[ NSString stringWithFormat:@"%@ (%@)", song.name , song.time]];
 				[_items addObject:item];
 			}
@@ -73,6 +88,7 @@
 
 - (void)dealloc {
 	TT_RELEASE_SAFELY(_churchModel);
+    TT_RELEASE_SAFELY(songsTemp);
 	[super dealloc];
 }
 

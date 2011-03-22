@@ -19,12 +19,16 @@
 
 BOOL _paused = YES;
 BOOL _isWebShowing = YES;
+BOOL _hasPreparedToPlay = NO;
+int _songIndex = 0;
 UITableView *_tableView;
+int tempIndex = 0;
 
 - (id)initWithChurchName:(NSString*)churchName {
 	[super self];
 	
 	if ((self = [super init])) {
+            self.navigationBarTintColor =  TTSTYLEVAR(navigationBarTintColorDark);
 		self.churchName = churchName;
 		self.dataSource = [[[SongDataSource alloc] initWithChurchName:churchName] autorelease];
 
@@ -41,19 +45,7 @@ UITableView *_tableView;
 	
 	
 	self.title = [NSString stringWithFormat:@"Inside %@", [self.churchName capitalizedString]];
-    
-//    UINavigationBar* bar = self.navigationController.navigationBar;
-//    bar.tintColor = [UIColor blackColor];
-//    bar.barStyle = _navigationBarStyle;
-//    .navigationBarTintColor = 
-	//self.tableView.frame = CGRectMake(0,0,320,300);
-	
-	/*
-	 self.navigationItem.backBarButtonItem =
-	 [[[UIBarButtonItem alloc] initWithTitle:@"Churches" style:UIBarButtonItemStyleBordered
-	 target:nil action:nil] autorelease];
-	 */
-	_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 0, 320, 420)];
+   	_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 0, 320, 420)];
 	_webView.autoresizesSubviews = YES;
 	_webView.autoresizingMask=(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth);
 	//set the web view delegates for the web view to be itself
@@ -93,7 +85,7 @@ UITableView *_tableView;
 	_rewindButton = [[UIBarButtonItem alloc]  
 					 initWithBarButtonSystemItem:UIBarButtonSystemItemRewind  
 					 target:self
-					 action:@selector(temp)];
+					 action:@selector(backwardTrack)];
 	
 	_playButton = [[UIBarButtonItem alloc]  
 				   initWithBarButtonSystemItem:UIBarButtonSystemItemPlay   
@@ -103,7 +95,7 @@ UITableView *_tableView;
 	_forwardButton = [[UIBarButtonItem alloc] 
 					  initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward
 					  target:self
-					  action:@selector(temp)];
+					  action:@selector(forwardTrack)];
 	
 	
 	
@@ -120,8 +112,8 @@ UITableView *_tableView;
 	[self.view addSubview:_churchToolBar];
 	[self.view addSubview:_slideView];
 	
-	_churchToolBar.hidden = YES;
-	_slideView.hidden = YES;
+	_churchToolBar.hidden = NO;
+	_slideView.hidden = NO;
 	scrubber = [ [ UISlider alloc ] initWithFrame: CGRectMake(20, 0, 241, 22) ];
 	scrubber.minimumValue = 0.0;
 	scrubber.value = 0;
@@ -139,11 +131,6 @@ UITableView *_tableView;
 	[_churchToolBar sizeToFit];
 	[_slideView sizeToFit];
 	
-	UIBarButtonItem *_backButton = [[UIBarButtonItem alloc]  
-									initWithImage: [UIImage imageNamed:@"arrow.png"]
-									style:UIBarButtonItemStyleBordered  
-									target:nil
-									action:nil];
 	
 
 	
@@ -170,6 +157,44 @@ UITableView *_tableView;
 	
 }
 
+- (void) forwardTrack {
+    _hasPreparedToPlay = NO;
+    
+    if (_player != nil && _player.playing) {
+		_player.stop;
+    }
+    
+    _songIndex++;
+    
+    SongDataSource *sd = self.dataSource;
+    
+    if( _songIndex > [sd.songsTemp count] -1 ) {
+        _songIndex = 0;
+    }
+    
+    [self playNextSongIndex];
+	
+}
+
+- (void) backwardTrack {
+    _hasPreparedToPlay = NO;
+    
+    if (_player != nil && _player.playing) {
+		_player.stop;
+    }
+    
+    _songIndex--;
+    
+    SongDataSource *sd = self.dataSource;
+    
+    if( _songIndex < 0) {
+        _songIndex = 0;
+    }
+    
+    [self playNextSongIndex];
+	
+}
+
 - (void) loadView {
 	[super loadView];
 	[self setup];
@@ -178,8 +203,10 @@ UITableView *_tableView;
 
 - (void)didSelectObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
 	
-	if (_player.playing) 
+	if (_player.playing) {
 		_player.stop;
+        _hasPreparedToPlay = NO;
+    }
 	
     //[super didSelectObject:object atIndexPath:indexPath];
 	TTTableButton *item = (TTTableButton *)object;
@@ -192,6 +219,7 @@ UITableView *_tableView;
 	NSString *trimmedString = [[split objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 
 	if( [self prepAudioWithFileName: trimmedString] ) {
+        _hasPreparedToPlay = YES;
 		[self playAudio];
 	} else {
 		NSLog(@"Error playing file");
@@ -282,10 +310,20 @@ UITableView *_tableView;
 
 - (void) playAudio {
 	if (_player) {
-		if(_player.playing)
+		if(_hasPreparedToPlay == YES && _player.playing == YES) {
 			_player.stop;
-		[_player play];
-	}
+            _hasPreparedToPlay = NO;
+        } else {
+            [_player play];
+        }
+    }
+    
+    if( _hasPreparedToPlay == NO ) {
+            
+        [self playNextSongIndex];
+        
+    }
+
 	
 	
 	[_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPause, self, @selector(pauseAudio))];
@@ -295,13 +333,22 @@ UITableView *_tableView;
 	scrubber.enabled = YES;
 }
 
-
-- (void)viewWillAppear:(BOOL)animated {
-       
-    self.navigationBarTintColor =  TTSTYLEVAR(navigationBarTintColorDark);
+-(void) playNextSongIndex {
+    SongDataSource *sd = self.dataSource;
+    NSString *songTitle = [sd.songsTemp objectAtIndex:_songIndex];
     
-    [super viewWillAppear:animated];
+    if([self prepAudioWithFileName: songTitle] == YES){
+        _hasPreparedToPlay = YES;
+        [_player play];
+    }
 }
+//
+//- (void)viewWillAppear:(BOOL)animated {
+//       
+//    self.navigationBarTintColor =  TTSTYLEVAR(navigationBarTintColorDark);
+//    
+//    [super viewWillAppear:animated];
+//}
 
 - (void)viewWillDisappear:(BOOL)animated {
 		if(_player.playing)

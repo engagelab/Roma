@@ -62,7 +62,7 @@
 									   action:@selector(updateTableLocations:)] autorelease];
 	
 	
-	[self initMapView];
+	//[self initMapView];
 	
 	
 	

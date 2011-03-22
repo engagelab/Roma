@@ -23,7 +23,7 @@
 
 - (id)initWithId:(NSString *)churchId {
 	if (self = [super init]) {
-		_churchId = churchId;
+		//_churchId = churchId;
 		self.churchId = churchId;
 	}
 	return self;

@@ -12,9 +12,10 @@
 
 	NSString *_churchName;
 	ChurchModel *_churchModel;
+    NSMutableArray *songsTemp;
 }
 
 @property (nonatomic, copy) NSString* churchName;
 @property (nonatomic, copy) ChurchModel *churchModel;
-
+@property (nonatomic, copy) NSMutableArray *songsTemp;
 @end

@@ -104,11 +104,11 @@
 			<song id="3" time="2:14">Palestrina and the Counter-reformation</song>
 		</songs>
 	</church>
-	<church id="mmontesano">
+	<church id="montesano">
 		<name>S Maria in Montesano</name>
 		<description>big church</description>
-		<icon>mmontesano.png</icon>
-		<contentPage>mmontesano</contentPage>
+		<icon>montesano.png</icon>
+		<contentPage>montesano</contentPage>
 		<latitude>41.90999</latitude>
 		<longitude>12.476907</longitude>
 		<songs>
@@ -121,7 +121,7 @@
 		<name>S Maria in Trastevere</name>
 		<description>big church</description>
 		<icon>mariatrastevere.png</icon>
-		<contentPage>mtrastevere</contentPage>
+		<contentPage>trastevere</contentPage>
 		<latitude>41.889377</latitude>
 		<longitude>12.470217</longitude>
 		<songs>

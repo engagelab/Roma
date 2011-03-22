@@ -83,7 +83,7 @@
 		//Church *church = [[Church alloc] initWithId:[child valueForAttributeNamed:@"id"]];
 		
 		Church *church = [[Church alloc] initWithId:[child valueForAttributeNamed:@"id"]];
-		//church.churchId = [child valueForAttributeNamed:@"id"];
+		church.churchId = [child valueForAttributeNamed:@"id"];
 		NSArray *subElements = [child childElements];
 		
 		
