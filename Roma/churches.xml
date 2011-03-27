@@ -120,7 +120,7 @@
 	<church id="mtrastevere">
 		<name>S Maria in Trastevere</name>
 		<description>big church</description>
-		<icon>mariatrastevere.png</icon>
+		<icon>trastevere.png</icon>
 		<contentPage>trastevere</contentPage>
 		<latitude>41.889377</latitude>
 		<longitude>12.470217</longitude>

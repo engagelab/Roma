@@ -88,6 +88,8 @@ BOOL outside = NO;
 	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
 	//load the URL into the web view.
 	[_webView loadRequest:requestObj];
+    [[_webView.subviews objectAtIndex:0] setScrollEnabled:NO];  //to stop scrolling completely
+    [[_webView.subviews objectAtIndex:0] setBounces:NO]; //to stop bouncing
 	//add the web view to the content view
 	[self.view addSubview:_webView];
 	[_webView sizeToFit];
@@ -114,6 +116,7 @@ BOOL outside = NO;
 	
 		[self.view addSubview:_churchToolBar];
 		[_churchToolBar sizeToFit];
+    	
 	
 }
 

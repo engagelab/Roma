@@ -10,6 +10,7 @@
 #import "ChurchDataSource.h"
 #import "SongDataSource.h"
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 
 @implementation ChurchPlayerViewController
@@ -24,6 +25,77 @@ int _songIndex = 0;
 UITableView *_tableView;
 int tempIndex = 0;
 
+// Audio session callback function for responding to audio route changes. If playing 
+//		back application audio when the headset is unplugged, this callback pauses 
+//		playback and displays an alert that allows the user to resume or stop playback.
+//
+//		The system takes care of iPod audio pausing during route changes--this callback  
+//		is not involved with pausing playback of iPod audio.
+void audioRouteChangeListenerCallback (
+                                       void                      *inUserData,
+                                       AudioSessionPropertyID    inPropertyID,
+                                       UInt32                    inPropertyValueSize,
+                                       const void                *inPropertyValue
+                                       ) {
+	
+	// ensure that this callback was invoked for a route change
+	if (inPropertyID != kAudioSessionProperty_AudioRouteChange) return;
+    
+	// This callback, being outside the implementation block, needs a reference to the
+	//		MainViewController object, which it receives in the inUserData parameter.
+	//		You provide this reference when registering this callback (see the call to 
+	//		AudioSessionAddPropertyListener).
+	ChurchPlayerViewController *controller = (ChurchPlayerViewController *) inUserData;
+	
+	// if application sound is not playing, there's nothing to do, so return.
+	if (controller.player.playing == 0 ) {
+        
+		NSLog (@"Audio route change while application audio is stopped.");
+		return;
+		
+	} else {
+        
+		// Determines the reason for the route change, to ensure that it is not
+		//		because of a category change.
+		CFDictionaryRef	routeChangeDictionary = inPropertyValue;
+		
+		CFNumberRef routeChangeReasonRef =
+        CFDictionaryGetValue (
+                              routeChangeDictionary,
+                              CFSTR (kAudioSession_AudioRouteChangeKey_Reason)
+                              );
+        
+		SInt32 routeChangeReason;
+		
+		CFNumberGetValue (
+                          routeChangeReasonRef,
+                          kCFNumberSInt32Type,
+                          &routeChangeReason
+                          );
+		
+		// "Old device unavailable" indicates that a headset was unplugged, or that the
+		//	device was removed from a dock connector that supports audio output. This is
+		//	the recommended test for when to pause audio.
+		if (routeChangeReason == kAudioSessionRouteChangeReason_OldDeviceUnavailable) {
+            
+			[controller.player pause];
+			NSLog (@"Output device removed, so application audio was paused.");
+            
+			UIAlertView *routeChangeAlertView = 
+            [[UIAlertView alloc]	initWithTitle: NSLocalizedString (@"Playback Paused", @"Title for audio hardware route-changed alert view")
+                                       message: NSLocalizedString (@"Audio output was changed", @"Explanation for route-changed alert view")
+                                      delegate: controller
+                             cancelButtonTitle: NSLocalizedString (@"StopPlaybackAfterRouteChange", @"Stop button title")
+                             otherButtonTitles: NSLocalizedString (@"ResumePlaybackAfterRouteChange", @"Play button title"), nil];
+			[routeChangeAlertView show];
+			// release takes place in alertView:clickedButtonAtIndex: method
+            
+		} else {
+            
+			NSLog (@"A route change occurred that does not require pausing of application audio.");
+		}
+	}
+}
 - (id)initWithChurchName:(NSString*)churchName {
 	[super self];
 	
@@ -43,7 +115,7 @@ int tempIndex = 0;
 
 - (void) setup {
 	
-	
+   	
 	self.title = [NSString stringWithFormat:@"Inside %@", [self.churchName capitalizedString]];
    	_webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 0, 320, 420)];
 	_webView.autoresizesSubviews = YES;
@@ -112,15 +184,17 @@ int tempIndex = 0;
 	[self.view addSubview:_churchToolBar];
 	[self.view addSubview:_slideView];
 	
+    int labelHeight = 21;
+    
 	_churchToolBar.hidden = NO;
 	_slideView.hidden = NO;
-	scrubber = [ [ UISlider alloc ] initWithFrame: CGRectMake(20, 0, 241, 22) ];
+	scrubber = [ [ UISlider alloc ] initWithFrame: CGRectMake(20 , 0, 241, 22) ];
 	scrubber.minimumValue = 0.0;
 	scrubber.value = 0;
 	scrubber.continuous = YES;
-	//[scubberControl addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
+	[scrubber addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
 	
-	scrubberLabel = [ [ UILabel alloc ] initWithFrame: CGRectMake(269, 0, 42, 21) ];
+	scrubberLabel = [ [ UILabel alloc ] initWithFrame: CGRectMake(269, 0, 42, labelHeight) ];
 	scrubberLabel.text = @"0:00";
 	scrubberLabel.backgroundColor = [UIColor blackColor];
 	scrubberLabel.textColor = [UIColor whiteColor];
@@ -128,6 +202,14 @@ int tempIndex = 0;
 	[_slideView addSubview:scrubber];
 	[_slideView addSubview:scrubberLabel];
 	
+    trackLabel = [ [ UILabel alloc ] initWithFrame: CGRectMake(20, 0+labelHeight+2, 241, labelHeight) ];
+	trackLabel.text = @"";
+    trackLabel.font = [UIFont boldSystemFontOfSize:10];
+	trackLabel.backgroundColor = [UIColor blackColor];
+	trackLabel.textColor = [UIColor whiteColor];
+	
+	[_slideView addSubview:trackLabel];
+    
 	[_churchToolBar sizeToFit];
 	[_slideView sizeToFit];
 	
@@ -160,8 +242,14 @@ int tempIndex = 0;
 - (void) forwardTrack {
     _hasPreparedToPlay = NO;
     
-    if (_player != nil && _player.playing) {
-		_player.stop;
+    if (_player) {
+        
+        if( _player.playing == YES ) {
+          
+            _player.stop;
+            _player.currentTime = 0;
+            [self updateMeters];
+        }
     }
     
     _songIndex++;
@@ -179,8 +267,10 @@ int tempIndex = 0;
 - (void) backwardTrack {
     _hasPreparedToPlay = NO;
     
-    if (_player != nil && _player.playing) {
-		_player.stop;
+    if( _player.playing == YES ) {
+        _player.stop;
+        _player.currentTime = 0;
+        [self updateMeters];
     }
     
     _songIndex--;
@@ -218,6 +308,8 @@ int tempIndex = 0;
 	
 	NSString *trimmedString = [[split objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 
+    trackLabel.text = trimmedString;
+    
 	if( [self prepAudioWithFileName: trimmedString] ) {
         _hasPreparedToPlay = YES;
 		[self playAudio];
@@ -301,7 +393,7 @@ int tempIndex = 0;
 	
 }
 - (void) pauseAudio {
-	[_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPlay, self, @selector(playAudio))];
+    [self showPlayButton];
 	[_churchToolBar setItems:_itemsPlay];
 	
 	if (_player.playing) 
@@ -326,35 +418,38 @@ int tempIndex = 0;
 
 	
 	
-	[_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPause, self, @selector(pauseAudio))];
+	[self showPauseButton];
+    
 	[_churchToolBar setItems:_itemsPlay];
 	
 	timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateMeters) userInfo:nil repeats:YES];
 	scrubber.enabled = YES;
 }
 
+-(void) showPauseButton {
+    [_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPause, self, @selector(pauseAudio))];
+}
+
+-(void) showPlayButton {
+	[_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPlay, self, @selector(playAudio))];
+}
+
+
 -(void) playNextSongIndex {
     SongDataSource *sd = self.dataSource;
     NSString *songTitle = [sd.songsTemp objectAtIndex:_songIndex];
     
+
+    
+    NSString *trackNumber = [NSString stringWithFormat:@"%d. ", _songIndex+1];
+    
+    trackLabel.text = [trackNumber stringByAppendingString:songTitle];
     if([self prepAudioWithFileName: songTitle] == YES){
         _hasPreparedToPlay = YES;
         [_player play];
+        [self showPauseButton];
+        
     }
-}
-//
-//- (void)viewWillAppear:(BOOL)animated {
-//       
-//    self.navigationBarTintColor =  TTSTYLEVAR(navigationBarTintColorDark);
-//    
-//    [super viewWillAppear:animated];
-//}
-
-- (void)viewWillDisappear:(BOOL)animated {
-		if(_player.playing)
-			_player.stop;
-	
-	
 }
 
 - (BOOL) prepAudioWithFileName:(NSString *)fileName {
@@ -368,7 +463,18 @@ int tempIndex = 0;
 	//NSURL *u = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"Tisket"  ofType:@"mp3"]];
 	
 	//NSLog("url %@",u);
-	_player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+
+    
+    
+    if(!_player ) {
+        _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        [_player setDelegate: self];
+    } else {
+        TT_RELEASE_SAFELY(_player);
+        _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        [_player setDelegate: self];
+    }
+    
 	if (!_player) {
 		NSLog(@"Error: %@", [error localizedDescription]);
 		return NO;
@@ -376,15 +482,20 @@ int tempIndex = 0;
 	
 	[_player prepareToPlay];
 	
-	_player.delegate = self;
-	[_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPlay, self, @selector(playAudio))];
+	[self showPauseButton];
+//	[_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPlay, self, @selector(playAudio))];
 
 	return YES;
 }
 
+
+
+
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
 	
-	[_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPlay, self, @selector(playAudio))];
+    [self showPlayButton];
+    
+//	[_itemsPlay replaceObjectAtIndex:3 withObject:SYSBARBUTTON(UIBarButtonSystemItemPlay, self, @selector(playAudio))];
 	scrubber.value = 0.0f;
 	scrubber.enabled = NO;
 	//[self prepAudio];
@@ -416,6 +527,104 @@ int tempIndex = 0;
 	self.navigationItem.rightBarButtonItem = SYSBARBUTTON(UIBarButtonSystemItemPlay, self, @selector(playAudio));
 }
 
+- (BOOL) canBecomeFirstResponder {
+    return YES;
+}
+
+/* The iPod controls will send these events when the app is in the background */
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    
+    if (event.type == UIEventTypeRemoteControl) {
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                if( _player.playing == YES ) {
+                    [_player pause];
+                    [self showPauseButton];
+                } else {
+                    [_player play];
+                    [self showPlayButton];
+                }
+                break;
+            case UIEventSubtypeRemoteControlPlay:
+                [_player play];
+                break;
+            case UIEventSubtypeRemoteControlPause:
+                [_player pause];
+                break;
+            case UIEventSubtypeRemoteControlStop:
+                [_player stop];
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+                [self forwardTrack];
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                [self backwardTrack];
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    
+    if(_player.playing)
+        _player.stop;
+	
+    
+    [super viewWillDisappear:animated];
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self resignFirstResponder];
+}
+
+
+- (void) viewDidAppear:(BOOL)animated {
+	
+    
+
+	
+    [super viewDidAppear:animated];
+    
+    // Registers this class as the delegate of the audio session.
+	[[AVAudioSession sharedInstance] setDelegate: self];
+	
+	// The AmbientSound category allows application audio to mix with Media Player
+	// audio. The category also indicates that application audio should stop playing 
+	// if the Ring/Siilent switch is set to "silent" or the screen locks.
+	[[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
+    
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
+    
+	UInt32 doSetProperty = 0;
+	AudioSessionSetProperty ( kAudioSessionProperty_OverrideCategoryMixWithOthers,
+                             sizeof (doSetProperty),
+                             &doSetProperty
+                             );
+    
+    
+    // Registers the audio route change listener callback function
+	AudioSessionAddPropertyListener (
+                                     kAudioSessionProperty_AudioRouteChange,
+                                     audioRouteChangeListenerCallback,
+                                     self
+                                     );
+    
+	// Activates the audio session.
+	
+	NSError *activationError = nil;
+	[[AVAudioSession sharedInstance] setActive: YES error: &activationError];
+    
+    UIApplication *application = [UIApplication sharedApplication];
+	if([application respondsToSelector:@selector(beginReceivingRemoteControlEvents)])
+		[application beginReceivingRemoteControlEvents];
+    
+    [self becomeFirstResponder];
+    
+	TTDPRINT(@"viewDidAppear");
+}
+
+
+
 
 - (void)dealloc {
 	
@@ -428,8 +637,11 @@ int tempIndex = 0;
 	TT_RELEASE_SAFELY(_playButton);
 	TT_RELEASE_SAFELY(_pauseButton);
 	TT_RELEASE_SAFELY(_itemsPlay);
+    TT_RELEASE_SAFELY(_player);
 	
 	[super dealloc];
 }
+
+
 
 @end

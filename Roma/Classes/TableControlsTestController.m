@@ -11,42 +11,43 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // NSObject
+- (TTTableImageItem*)itemForURL:(NSString*)URL {
+    return [TTTableSubtitleItem itemWithText:@"Table Row" subtitle:nil imageURL:URL
+                                defaultImage:TTIMAGE(@"bundle://defaultMusic.png")
+                                         URL:nil accessoryURL:nil];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.autoresizesForKeyboard = YES;
-        self.variableHeightRows = YES;
         self.dataSource = [[[ChurchDataSource alloc] init] autorelease];
-
-        
-//        self.title = @"Three20 Catalog";
         self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc]  
                                                   initWithImage: [UIImage imageNamed:@"arrow.png"]
                                                   style:UIBarButtonItemStyleBordered  
                                                   target:nil
                                                   action:nil] autorelease];
-//        
-//        self.tableViewStyle = UITableViewStyleGrouped;
+        
     }
+    
     return self;
 }
 
 - (id)init {
   if ((self = [super init])) {
-    //self.tableViewStyle = UITableViewStyleGrouped;
     self.autoresizesForKeyboard = YES;
-    self.variableHeightRows = YES;
 	self.dataSource = [[[ChurchDataSource alloc] init] autorelease];
+   
   }
   return self;
 }
 
 - (void)loadView {
+ 
 	[super loadView];
-	
 	self.title = @"Roma Churches";
 	
 	self.tableView.frame = CGRectMake(0,0,320,372);
+
 	//self.navigationBarTintColor = [UIColor whiteColor];
 	
 	_toolbar =  [[UIToolbar alloc] initWithFrame:  CGRectMake(0, 372, 320, 44)]; 
@@ -62,7 +63,7 @@
 									   action:@selector(updateTableLocations:)] autorelease];
 	
 	
-	//[self initMapView];
+	[self initMapView];
 	
 	
 	
@@ -87,11 +88,10 @@
 	[self.view addSubview:_toolbar];
 	[_toolbar sizeToFit];
 	
-	
+    self.tableView.rowHeight = 75;
 	
 	
 }
-
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
 	NSLog(@"Location manager error: %@", [error description]);

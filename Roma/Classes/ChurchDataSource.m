@@ -17,7 +17,7 @@
 
 
 - (id)init {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		_churchModel = [[ChurchModel alloc] init];
 		self.model = _churchModel;
 	}
@@ -43,17 +43,20 @@
 		
 		TTTableSubtitleItemStyle* item = [TTTableSubtitleItemStyle itemWithText:church.name subtitle:[NSString stringWithFormat:@"%@m away", church.distanceAway]
 															imageURL:localImage defaultImage:nil
-														  URL:viewUrl accessoryURL:nil imageStyle:TTSTYLE(rounded)];
+                                                            
+														  URL:viewUrl accessoryURL:nil
+                                                                     imageStyle: TTSTYLE(rounded)];
+     
+
 		/*
 		TTTableItem* item = [TTTableImageItem itemWithText:church.name imageURL:localImage
 						  defaultImage:nil imageStyle:TTSTYLE(rounded)
 													   URL:viewUrl];
 		*/
 		
+        
 		[_items addObject:item];
-		
-		
-		
+        
 	}
 	 
 }

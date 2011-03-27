@@ -16,6 +16,7 @@
 #import "ChurchViewController.h"
 #import "ChurchPlayerViewController.h"
 #import "StyleSheet.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,8 +27,11 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 
+    
+       
+    
 //  [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
-  [application setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+
   [TTExtensionLoader loadAllExtensions];
     
   [self parseXML];

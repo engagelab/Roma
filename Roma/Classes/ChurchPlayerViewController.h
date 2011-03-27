@@ -29,6 +29,7 @@
 	NSTimer *timer;
 	UISlider *scrubber;
 	UILabel *scrubberLabel;
+    UILabel *trackLabel;
 	UIBarButtonItem *_musicButton;
 	UIBarButtonItem *_webButton;
 }
