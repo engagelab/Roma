@@ -3,6 +3,7 @@
 #import "ChurchSingleton.h"
 #import "Church.h"
 #import "PlaceMark.h"
+#import "TVOutManager.h"
 
 
 @implementation TableControlsTestController
@@ -18,6 +19,11 @@
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    
+//    [TVOutManager sharedInstance].tvSafeMode = YES;
+   [[TVOutManager sharedInstance] startTVOut];
+    
+//    
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.autoresizesForKeyboard = YES;
         self.dataSource = [[[ChurchDataSource alloc] init] autorelease];
@@ -82,13 +88,16 @@
 	
 	UIBarButtonItem *pLogOut = [[UIBarButtonItem alloc] initWithCustomView:_segmentedControl];
 	
-	NSArray *items = [NSArray arrayWithObjects:anotherButton,flexItem,pLogOut,nil];
+	NSArray *items = [[NSArray arrayWithObjects:anotherButton,flexItem,pLogOut,nil] autorelease];
 	_toolbar.items = items;
 	
 	[self.view addSubview:_toolbar];
 	[_toolbar sizeToFit];
 	
     self.tableView.rowHeight = 75;
+    
+   // TT_RELEASE_SAFELY(items);
+   // TT_RELEASE_SAFELY(pLogOut);
 	
 	
 }
@@ -115,7 +124,8 @@
 		
 		CLLocationDistance target = [newLocation distanceFromLocation:location1];
 		
-		
+        TT_RELEASE_SAFELY(location1);
+        
 //		NSInteger myInteger = (NSInteger)( target / 1000);
 		
 		NSString *str = [NSString stringWithFormat:@"%1.2f", ( target / 1000)];
@@ -152,6 +162,7 @@
 	NSLog(@"newLocation %@\n", [newLocation description]);
 	[_mapView setCenterCoordinate:_mapView.userLocation.location.coordinate
 							 animated:YES];
+
 }
 
 - (void) initMapView {
@@ -218,6 +229,7 @@
 		NSLog(@"long %@ lat %@",church.longitude, church.latitude);
 		
 		[myArray addObject: poi];
+        TT_RELEASE_SAFELY(poi);
 	}
 	
 	[_mapView addAnnotations: myArray];

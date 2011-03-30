@@ -53,7 +53,7 @@ static ChurchSingleton *_sharedInstance = nil;
 }
 
 - (void)dealloc {
-	//TT_RELEASE_SAFELY(_churches);
+	TT_RELEASE_SAFELY(_churches);
 	[super dealloc];
 }
 

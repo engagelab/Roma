@@ -275,7 +275,7 @@ void audioRouteChangeListenerCallback (
     
     _songIndex--;
     
-    SongDataSource *sd = self.dataSource;
+
     
     if( _songIndex < 0) {
         _songIndex = 0;
@@ -327,8 +327,8 @@ void audioRouteChangeListenerCallback (
 	if( _tableView.hidden == YES ) {
 		_tableView.hidden = NO;
 		_webView.hidden = YES;
-		_slideView.hidden = NO;
-		_churchToolBar.hidden = NO;
+		//_slideView.hidden = NO;
+		//_churchToolBar.hidden = NO;
 		
 		
 		
@@ -345,11 +345,11 @@ void audioRouteChangeListenerCallback (
 		_webView.hidden = NO;
 		
 		if(_player.playing) {
-			_slideView.hidden = NO;
-			_churchToolBar.hidden = NO;
+			//_slideView.hidden = NO;
+			//_churchToolBar.hidden = NO;
 		} else {
-			_slideView.hidden = YES;
-			_churchToolBar.hidden = YES;
+			//_slideView.hidden = YES;
+			//_churchToolBar.hidden = YES;
 		}
 		_musicButton = [[UIBarButtonItem alloc]  
 						initWithImage:[UIImage imageNamed:@"Note.png"]

@@ -16,6 +16,7 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		AE43C14D134236EF000C85D1 /* TVOutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE43C14C134236EF000C85D1 /* TVOutManager.m */; };
 		AE48C214132E6077005EA1DC /* ceciliaI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C1FC132E6077005EA1DC /* ceciliaI.png */; };
 		AE48C216132E6077005EA1DC /* ceciliaO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C1FE132E6077005EA1DC /* ceciliaO.png */; };
 		AE48C218132E6077005EA1DC /* lorenzoI.png in Resources */ = {isa = PBXBuildFile; fileRef = AE48C200132E6077005EA1DC /* lorenzoI.png */; };
@@ -291,6 +292,8 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		AE43C14B134236EF000C85D1 /* TVOutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVOutManager.h; sourceTree = "<group>"; };
+		AE43C14C134236EF000C85D1 /* TVOutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVOutManager.m; sourceTree = "<group>"; };
 		AE48C1FC132E6077005EA1DC /* ceciliaI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaI.png; sourceTree = "<group>"; };
 		AE48C1FE132E6077005EA1DC /* ceciliaO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceciliaO.png; sourceTree = "<group>"; };
 		AE48C200132E6077005EA1DC /* lorenzoI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lorenzoI.png; sourceTree = "<group>"; };
@@ -400,8 +403,8 @@
 		AE57BB18133F55A200E979B2 /* nuova.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuova.png; sourceTree = "<group>"; };
 		AE57BB19133F55A200E979B2 /* pietro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pietro.png; sourceTree = "<group>"; };
 		AE57BB1A133F55A200E979B2 /* trastevere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trastevere.png; sourceTree = "<group>"; };
-		AE57BB26133F783300E979B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		AE57BB28133F7BC100E979B2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		AE57BB26133F783300E979B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		AE57BB28133F7BC100E979B2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		AE6009131338AE3A00663096 /* montesanoI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = montesanoI.png; sourceTree = "<group>"; };
 		AE6009141338AE3A00663096 /* montesanoO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = montesanoO.png; sourceTree = "<group>"; };
 		AE983FB2132A125800F84546 /* Roma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roma.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -603,6 +606,8 @@
 		AE51B95A132A167600EC32C1 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AE57BB28133F7BC100E979B2 /* Icon.png */,
+				AE57BB26133F783300E979B2 /* Default@2x.png */,
 				AE51B9C8132A191F00EC32C1 /* general */,
 				AE51B983132A177200EC32C1 /* table icons */,
 				AE51B984132A178100EC32C1 /* basic icons */,
@@ -659,6 +664,8 @@
 		AE51B986132A17D800EC32C1 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				AE43C14B134236EF000C85D1 /* TVOutManager.h */,
+				AE43C14C134236EF000C85D1 /* TVOutManager.m */,
 				AE48C2B4132EC34F005EA1DC /* StyleSheet.h */,
 				AE48C2B5132EC34F005EA1DC /* StyleSheet.m */,
 				AE51B959132A15E100EC32C1 /* table */,
@@ -751,8 +758,6 @@
 		AE983FA7132A125800F84546 = {
 			isa = PBXGroup;
 			children = (
-				AE57BB28133F7BC100E979B2 /* Icon.png */,
-				AE57BB26133F783300E979B2 /* Default@2x.png */,
 				AE983FBC132A125800F84546 /* Roma */,
 				AE983FDC132A125800F84546 /* RomaTests */,
 				AE983FB5132A125800F84546 /* Frameworks */,
@@ -1168,6 +1173,7 @@
 				AE51BA57132A226C00EC32C1 /* ChurchSingleton.m in Sources */,
 				AE51BA59132A22B000EC32C1 /* main.m in Sources */,
 				AE48C2B6132EC350005EA1DC /* StyleSheet.m in Sources */,
+				AE43C14D134236EF000C85D1 /* TVOutManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

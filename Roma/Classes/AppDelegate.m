@@ -16,6 +16,7 @@
 #import "ChurchViewController.h"
 #import "ChurchPlayerViewController.h"
 #import "StyleSheet.h"
+#import "TVOutManager.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,9 +28,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 
-    
-       
-    
+    //[TVOutManager sharedInstance].tvSafeMode = YES;
+//    [[TVOutManager sharedInstance] startTVOut];
 //  [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
 
   [TTExtensionLoader loadAllExtensions];
@@ -134,9 +134,10 @@
 		}
 		
 		church.distanceAway = @"0";
-	    NSLog(@"THE CHURCH: %@", church );
+	    TTDPRINT(@"THE CHURCH: %@", church );
 		[[[ChurchSingleton sharedInstance] churches] addObject: church];
 		//[[ChurchSingleton sharedInstance] test];
+        //TT_RELEASE_SAFELY(church);
 	}
 	
 }
@@ -151,5 +152,24 @@
     [[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:URL.absoluteString]];
     return YES;
 }
+
+#pragma mark Notifications
+
+-(void) screenDidConnectNotification: (NSNotification*) notification
+{
+    TTDPRINT("%@",[NSString stringWithFormat: @"Screen connected: %@", [[notification object] description]]);
+}
+
+-(void) screenDidDisconnectNotification: (NSNotification*) notification
+{
+	TTDPRINT("%@",[NSString stringWithFormat: @"Screen disconnected: %@", [[notification object] description]]);
+}
+
+-(void) screenModeDidChangeNotification: (NSNotification*) notification
+{
+	TTDPRINT("%@",[NSString stringWithFormat: @"Screen mode changed: %@", [[notification object] description]]);
+}
+
+
 
 @end
